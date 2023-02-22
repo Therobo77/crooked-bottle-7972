@@ -1,9 +1,9 @@
-RCT211 Flipkart
+## RCT211 Flipkart
 
------------------------------User Flow-------------------------------------
+### -----------------------------User Flow-------------------------------------
 
 
-----------Workflow--------
+#### ----------Workflow--------
 
 Homepage -> Single category page(All Mobile Page) --> Single Item Page () 
 
@@ -20,7 +20,7 @@ Buy now  ------------------------------------>Login and Signup -->  Delivery Add
 
 
 
------------------------------Admin Flow-------------------------------------
+#### -----------------------------Admin Flow-------------------------------------
 
 1. Login and Signup
 2. Dashboard ()
@@ -30,13 +30,13 @@ Buy now  ------------------------------------>Login and Signup -->  Delivery Add
 6. Product (CRUD Operation)
 7. All User List
 8. Order Details --> Pending order & Completed order
-9. 
 
 
 
 
 
----------------Work Division--------------
+
+#### ---------------Work Division--------------
 
 1. Vikash ---> 
 
@@ -52,8 +52,11 @@ Buy now  ------------------------------------>Login and Signup -->  Delivery Add
    Single Product page 
 
 4. Rohit
-   Checkout page and  Payment
 
 Add to cart --> Cart (place order Button ) -->Login and Signup --> Delivery Address --> Payment
 
 Buy now  ------------------------------------>Login and Signup -->  Delivery Address --> Payment
+
+5. Subhendu Das
+
+Delivery Address page (With Routing functionality)
