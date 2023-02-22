@@ -31,7 +31,7 @@ const Cart = () => {
     <>
       <div className="col-10 mx-auto mt-3">
         <div className="row">
-          <div className="col-8">
+          <div className="col-md-8 col-12">
             <div className="card p-3">
               <div className="row">
                 <h5>My Cart({allCart.length})</h5>
@@ -54,7 +54,7 @@ const Cart = () => {
                           </div>
 
                           <div className="row mt-3">
-                            <div className="col-3">
+                            <div className="col-md-3 col-12">
                               <div className="input-group">
                                 <input
                                   type="button"
@@ -78,15 +78,17 @@ const Cart = () => {
                                 />
                               </div>
                             </div>
-                            <button className="btn btn-light w-25 me-2 fw-bold text-secondary">
-                              Save for later
-                            </button>
-                            <button
-                              className="btn btn-light w-25 fw-bold text-secondary"
-                              onClick={() => removeItemFromCart(el.id)}
-                            >
-                              Remove
-                            </button>
+                            <div className="col-md-9 col-12">
+                              <button className="btn btn-light w-25 me-2 fw-bold text-secondary">
+                                Save for later
+                              </button>
+                              <button
+                                className="btn btn-light w-25 fw-bold text-secondary"
+                                onClick={() => removeItemFromCart(el.id)}
+                              >
+                                Remove
+                              </button>
+                            </div>
                           </div>
                         </div>
                       );
@@ -100,7 +102,7 @@ const Cart = () => {
               </div>
             </div>
           </div>
-          <div className="col-4">
+          <div className="col-md-4 col-12">
             <div className="card p-3 shadow border-0">
               <h3 className="mb-3">PRICE DETAILS</h3>
               <div className="row mb-3">
