@@ -1,0 +1,7 @@
+.mobile-page-with-sidebar{
+    display: flex;
+}
+.mobile-card{
+    border: 2px solid black;
+    
+}
