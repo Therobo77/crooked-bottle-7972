@@ -1,0 +1,27 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --blue-color: #047bd5
+}
+
+/* /////////////// left sec /////////////////// */
+
+/* /////////////// logged /////////////// */
+
+.logo-sec {
+  background-color: var(--blue-color);
+  padding: 0px 20%;
+}
+
+.logo-sec > img {
+  width: 8%;
+}
+
+/* ///////////////// delivery sec /////////////////// */
+
+/* /////////////// right sec /////////////////// */
