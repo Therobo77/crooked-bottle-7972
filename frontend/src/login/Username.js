@@ -14,8 +14,8 @@ const Username = () => {
     validate: usernameValidate,
     validateOnBlur: false,
     validateOnChange: false,
-    onSubmit: async (values) => {
-      console.log("values", formik.values.Username);
+    onSubmit: async values => {
+      console.log("values", values);
     },
   });
 
@@ -40,7 +40,7 @@ const Username = () => {
 
             <div className="textbox flex flex-col items-center gap-6">
               <input
-                {...formik.getFieldProps("Username")}
+                {...formik.getFieldProps('Username')}
                 className={styles.textbox}
                 type="text"
                 placeholder="UserName"
