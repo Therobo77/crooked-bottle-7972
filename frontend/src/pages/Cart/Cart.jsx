@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCart, removeItemCart } from "../../Redux/CartReducer/cartAction";
+import { payUsingPaytm } from "../Payment/payment";
+import { post } from "../Payment/utils/paytm";
 const Cart = () => {
   const dispatch = useDispatch();
 
@@ -25,6 +27,15 @@ const Cart = () => {
 
   const removeItemFromCart = (id) => {
     dispatch(removeItemCart(id));
+  };
+
+  const buyNow = () => {
+    let response = payUsingPaytm({ amount: 554, email: "rohit@gmail.com" });
+    let information = {
+      action : 'https://securegw-stage.paytm.in/order/process',
+      params: response
+    }
+    post(information)
   };
 
   return (
@@ -96,7 +107,10 @@ const Cart = () => {
                 </div>
               </div>
               <div className="col-12 text-end mt-3">
-                <button className="btn btn-warning w-25 p-3">
+                <button
+                  className="btn btn-warning w-25 p-3"
+                  onClick={() => buyNow()}
+                >
                   Place Order
                 </button>
               </div>
