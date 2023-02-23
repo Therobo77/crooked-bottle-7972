@@ -5,23 +5,143 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-:root {
-  --blue-color: #047bd5
+body {
+  background-color: lavender;
 }
 
-/* /////////////// left sec /////////////////// */
+:root {
+  --blue-color: #2874f0
+}
 
-/* /////////////// logged /////////////// */
+/* ///////////////// logo sec ///////////// */
 
 .logo-sec {
   background-color: var(--blue-color);
-  padding: 0px 20%;
+  padding: 0px 15%;
 }
 
 .logo-sec > img {
   width: 8%;
 }
 
+/* /////////////// left sec /////////////////// */
+
+/* /////////////// log sec /////////////// */
+
+.logged {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 8%;
+}
+
+.left-sec {
+  width: 65%;
+}
+
+.right-sec {
+  width: 33%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.log-sec {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+
+.log-sec > h4 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: gray;
+}
+
+.log-sec > h4 > img {
+  width: 20px;
+  margin-left: 20px;
+}
+
+
+
 /* ///////////////// delivery sec /////////////////// */
 
+.delivery-title-sec {
+  padding: 15px 20px;
+  border-radius: 2px 2px 0px 0px;
+  background-color: var(--blue-color);
+  color: white;
+}
+
+.delivery-sec {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+
+.delivery-name {
+  margin-bottom: 10px;
+}
+
+.delivery-address {
+  margin-bottom: 20px;
+}
+
+.delivery-sec > button {
+  background-color: #fb641b;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+
+/* /////////////////// new address //////////////////// */
+
+.new-address {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 2px;
+  font-weight: bold;
+  color: var(--blue-color);
+  cursor: pointer;
+}
+
+.new-address > p {
+  display: flex;
+  align-items: center;
+}
+
+.new-address > p > img {
+  width: 20px;
+  margin-left: 10px;
+}
+
 /* /////////////// right sec /////////////////// */
+
+.price-title {
+  color: gray;
+  padding: 15px 20px;
+}
+
+.right-sec hr {
+  border: 1px solid lavender;
+}
+
+.price-body {
+  padding: 15px 20px;
+}
+
+.price-body > p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.price-body > h4 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
