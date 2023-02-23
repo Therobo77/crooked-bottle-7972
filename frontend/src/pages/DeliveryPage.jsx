@@ -87,7 +87,7 @@ const Logged = () => {
 };
 
 // main component
-export const DeliveryPage = () => {
+const DeliveryPage = () => {
   const [log, setLog] = useState(true);
 
   return (
@@ -100,3 +100,5 @@ export const DeliveryPage = () => {
     </div>
   );
 };
+
+export default DeliveryPage
