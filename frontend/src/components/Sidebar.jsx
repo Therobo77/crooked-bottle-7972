@@ -4,7 +4,6 @@ export default function Sidebar() {
     
     return(
         <div className="sidebar">
-           
                 <Box className="left-mobile">
                     <Heading as='h2' size='lg'>Filter</Heading>
                     <Text>CATEGORIES</Text>
