@@ -7,6 +7,7 @@ import PageNotFound from "./PageNotFound";
 import Cart from "./Cart/Cart";
 import DeliveryPage from "./DeliveryPage";
 import Username from "../login/Username";
+import SingleMobile from "./Mobile/SingleMobile";
 
 const MainRoute = () => {
   return (
@@ -15,12 +16,14 @@ const MainRoute = () => {
         <Route path="/" element={<HomePage />}></Route>
 
         <Route path="/mobile-page" element={<MobilePage />}></Route>
-
+        <Route path="/single/:id" element={<SingleMobile/>}/>
         <Route path="/cart" element={<Cart />}></Route>
+
+        <Route path="/user_name" element={<Username  />}></Route>
+
 
         <Route path="/deliverypage" element={<DeliveryPage />}></Route>
 
-        <Route path="/user_name" element={<Username />}></Route>
 
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
