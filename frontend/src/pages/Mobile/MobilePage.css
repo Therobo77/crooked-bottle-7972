@@ -1,7 +1,25 @@
+
 .mobile-page-with-sidebar{
     display: flex;
 }
-.mobile-card{
-    border: 2px solid black;
+.mobile-page{
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:5px;
     
 }
+
+/* .card{
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+    border: 2px solid rgb(219, 25, 25);
+
+} */
+
+.carddiv:hover{
+    cursor: pointer;
+    scale: 1.01;
+}
+

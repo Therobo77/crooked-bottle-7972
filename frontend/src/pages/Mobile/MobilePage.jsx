@@ -1,13 +1,15 @@
 import Sidebar from "../../components/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
-import "./MobilePage.css";
+import "../Mobile/MobilePage.css";
 import { useEffect } from "react";
 import { getProductData } from "../../Redux/ProductReducer/action";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import MobileCard from "./MobileCard";
+import UpperBar from "../../components/UpperBar";
 
 export default function MobilePage() {
   const data = useSelector((store) => {
-    console.log(store.productReducer);
+    // console.log(store.productReducer);
     return store?.productReducer?.products;
   });
   const dispatch = useDispatch();
@@ -15,26 +17,42 @@ export default function MobilePage() {
   //    console.log("data");
 
   useEffect(() => {
-    console.log("hello");
     dispatch(getProductData);
   }, []);
-  console.log(data);
+  // console.log("2222",data);
   return (
     <div className="mobile-page-with-sidebar">
-      <Sidebar />
-      <div className="mobile-page">
-        {data.length > 1 &&
-          data?.map((el) => {
-            return (
-              <Flex>
-                <Box className="mobile-card" key={el.id}>
-                  <Image src={el.images[0]} />
-                  <Text>{el.title}</Text>
+      
+     <Sidebar/>
+     
+    <Box>
+      <Box>
+          <UpperBar/>
+      </Box>
+      <Box>
+ <div className="mobile-page">
+        
+        {data.length > 0 &&
+          data?.map((el, i) => {
+           
+            if (i < 15) {
+              return (
+                <Box className="card" style={{border:'none',borderColor:'white'}}>
+                  <div key={el.id}>
+                  <MobileCard  {...el} />
+
+                  </div>
                 </Box>
-              </Flex>
-            );
+              );
+            }else{
+              return false
+            }
           })}
       </div>
+      </Box>
+    </Box>
+
+     
     </div>
   );
 }
