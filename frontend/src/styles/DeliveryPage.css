@@ -3,9 +3,10 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  
 }
 
-body {
+.delivery-page {
   background-color: lavender;
 }
 
@@ -86,7 +87,12 @@ body {
 }
 
 .delivery-address {
+  border: 1px solid gray;
+  outline: none;
   margin-bottom: 20px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 2px;
 }
 
 .delivery-sec > button {
@@ -98,27 +104,6 @@ body {
   cursor: pointer;
 }
 
-/* /////////////////// new address //////////////////// */
-
-.new-address {
-  background-color: white;
-  padding: 15px 20px;
-  border-radius: 2px;
-  font-weight: bold;
-  color: var(--blue-color);
-  cursor: pointer;
-}
-
-.new-address > p {
-  display: flex;
-  align-items: center;
-}
-
-.new-address > p > img {
-  width: 20px;
-  margin-left: 10px;
-}
-
 /* /////////////// right sec /////////////////// */
 
 .price-title {
@@ -127,7 +112,7 @@ body {
 }
 
 .right-sec hr {
-  border: 1px solid lavender;
+  border: 1px solid gray;
 }
 
 .price-body {
@@ -144,4 +129,5 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  font-weight: bold;
 }
