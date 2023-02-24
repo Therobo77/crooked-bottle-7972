@@ -21,38 +21,35 @@ export default function MobilePage() {
   }, []);
   // console.log("2222",data);
   return (
-    <div className="mobile-page-with-sidebar">
-      
-     <Sidebar/>
-     
-    <Box>
-      <Box>
-          <UpperBar/>
-      </Box>
-      <Box>
- <div className="mobile-page">
-        
-        {data.length > 0 &&
-          data?.map((el, i) => {
-           
-            if (i < 15) {
-              return (
-                <Box className="card" style={{border:'none',borderColor:'white'}}>
-                  <div key={el.id}>
-                  <MobileCard  {...el} />
-
-                  </div>
-                </Box>
-              );
-            }else{
-              return false
-            }
-          })}
+    // <div className="mobile-page-with-sidebar">
+    <div className="row">
+      <div className="col-md-3 col-12">
+        {" "}
+        <Sidebar />
       </div>
-      </Box>
-    </Box>
-
-     
+      <div className="col-md-9 col-12">
+        <div className="row">
+          <div className="col-12">
+            <UpperBar />
+          </div>
+          <div className="row">
+            {data.length > 0 &&
+              data?.map((el, i) => {
+                if (i < 15) {
+                  return (
+                    <div key={el.id} className="col-md-3 col-12">
+                      <MobileCard {...el} />
+                    </div>
+                  );
+                } else {
+                  return false;
+                }
+              })}
+          </div>
+        </div>
+      </div>
     </div>
+
+    // </div>
   );
 }
