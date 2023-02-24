@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import MainRoute from "./pages/MainRoute";
 import Username from "./login/Username";
