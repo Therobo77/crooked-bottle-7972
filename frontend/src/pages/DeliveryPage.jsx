@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../styles/DeliveryPage.css'
+import "../styles/DeliveryPage.css";
 
 // not logged component
 const NotLogged = () => {
@@ -8,11 +8,17 @@ const NotLogged = () => {
 
 // logged component
 const Logged = () => {
+  const [address, setAddress] = useState('')
+
   const name = "Subhendu Das";
   const mobile = "8768392986";
-  const address = "Bus stand, Asansol, Paschim Bardhaman, 700001";
-  const price = 1000
+  const price = 1000;
   const count = 1;
+
+  const submitAddress = (e) => {
+    e.preventDefault()
+    console.log(address)
+  }
 
   return (
     <div className="logged">
@@ -40,28 +46,21 @@ const Logged = () => {
         </div>
 
         {/* delivery sec */}
-        <div className="delivery-sec">
+        <form className="delivery-sec" onSubmit={submitAddress}>
           <p className="delivery-name">
             <small>
               <b>{name}</b> {mobile}
             </small>
           </p>
-          <p className="delivery-address">
-            <small>{address}</small>
-          </p>
-          <button>DELIVER HERE</button>
-        </div>
-
-        {/* new address */}
-        <div className="new-address">
-          <p>
-            <small>Add a new address</small>{" "}
-            <img
-              src="https://cdn2.iconfinder.com/data/icons/funtime-objects-part-2/60/005_057_plus_add_cross_advantage_positive-64.png"
-              alt=""
-            />
-          </p>
-        </div>
+          <input
+            type="text"
+            placeholder="Give your address here"
+            className="delivery-address"
+            onChange={e => setAddress(e.target.value)}
+          />
+          <br />
+          <button type="submit">DELIVER HERE</button>
+        </form>
       </div>
 
       {/* right sec */}
@@ -71,15 +70,16 @@ const Logged = () => {
         </div>
         <hr />
         <div className="price-body">
-          
           <p>
             <span>{`Price (1 item)`}</span> <span>₹{price}</span>
           </p>
           <p>
-            <span>Deleviry Charges</span> <span>FREE</span>
+            <span>Delivery Charges</span> <span>FREE</span>
           </p>
           <hr />
-          <h4><span>Total Payable</span> <span>₹{price * count}</span> </h4>
+          <h4>
+            <span>Total Payable</span> <span>₹{price * count}</span>{" "}
+          </h4>
         </div>
       </div>
     </div>
@@ -101,4 +101,4 @@ const DeliveryPage = () => {
   );
 };
 
-export default DeliveryPage
+export default DeliveryPage;
