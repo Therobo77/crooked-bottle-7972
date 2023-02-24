@@ -16,14 +16,12 @@ const MainRoute = () => {
         <Route path="/" element={<HomePage />}></Route>
 
         <Route path="/mobile-page" element={<MobilePage />}></Route>
-        <Route path="/single/:id" element={<SingleMobile/>}/>
+        <Route path="/single/:id" element={<SingleMobile />} />
         <Route path="/cart" element={<Cart />}></Route>
 
-        <Route path="/user_name" element={<Username  />}></Route>
-
+        <Route path="/user_name" element={<Username />}></Route>
 
         <Route path="/deliverypage" element={<DeliveryPage />}></Route>
-
 
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
