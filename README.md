@@ -4,4 +4,4 @@
 [Google Meet Link](https://meet.google.com/wpm-bntz-iet)
 
 - morning Scrum time 
-    - 11.30 sharp (mandatory for Everyone)
+    - 11.30 sharp EveryDay (mandatory for Everyone)

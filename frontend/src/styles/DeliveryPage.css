@@ -3,25 +3,131 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.delivery-page {
+  background-color: lavender;
 }
 
 :root {
-  --blue-color: #047bd5
+  --blue-color: #2874f0
 }
 
-/* /////////////// left sec /////////////////// */
-
-/* /////////////// logged /////////////// */
+/* ///////////////// logo sec ///////////// */
 
 .logo-sec {
   background-color: var(--blue-color);
-  padding: 0px 20%;
+  padding: 0px 15%;
 }
 
 .logo-sec > img {
   width: 8%;
 }
 
+/* /////////////// left sec /////////////////// */
+
+/* /////////////// log sec /////////////// */
+
+.logged {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 8%;
+}
+
+.left-sec {
+  width: 65%;
+}
+
+.right-sec {
+  width: 33%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.log-sec {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+
+.log-sec > h4 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: gray;
+}
+
+.log-sec > h4 > img {
+  width: 20px;
+  margin-left: 20px;
+}
+
+
+
 /* ///////////////// delivery sec /////////////////// */
 
+.delivery-title-sec {
+  padding: 15px 20px;
+  border-radius: 2px 2px 0px 0px;
+  background-color: var(--blue-color);
+  color: white;
+}
+
+.delivery-sec {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+
+.delivery-name {
+  margin-bottom: 10px;
+}
+
+.delivery-address {
+  border: 1px solid gray;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 2px;
+}
+
+.delivery-sec > button {
+  background-color: #fb641b;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+
 /* /////////////// right sec /////////////////// */
+
+.price-title {
+  color: gray;
+  padding: 15px 20px;
+}
+
+.right-sec hr {
+  border: 1px solid gray;
+}
+
+.price-body {
+  padding: 15px 20px;
+}
+
+.price-body > p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.price-body > h4 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-weight: bold;
+}
