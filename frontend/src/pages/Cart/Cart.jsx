@@ -23,19 +23,22 @@ const Cart = () => {
       setPrice(item.price);
       setTotal(item.discountedPrice);
     });
-  }, [allCart]);
+  }, []);
 
   const removeItemFromCart = (id) => {
     dispatch(removeItemCart(id));
   };
 
-  const buyNow = () => {
-    let response = payUsingPaytm({ amount: 554, email: "rohit@gmail.com" });
+  const buyNow = async () => {
+    let response = await payUsingPaytm({
+      amount: 554,
+      email: "rohit@gmail.com",
+    });
     let information = {
-      action : 'https://securegw-stage.paytm.in/order/process',
-      params: response
-    }
-    post(information)
+      action: "https://securegw-stage.paytm.in/order/process",
+      params: response,
+    };
+    post(information);
   };
 
   return (
