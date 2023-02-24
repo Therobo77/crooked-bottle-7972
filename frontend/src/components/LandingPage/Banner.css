@@ -1,0 +1,29 @@
+.slider-container
+{
+    background-color: white;
+    width: 100%;
+    border: 1px solid red;
+   /* height:335px ; */
+    display: flex;
+}
+.left-banner{
+    border: 1px solid blue;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 500;
+   cursor: pointer;
+}
+.right-box
+{
+    border: 1px solid blue;
+    width: 80%;
+   
+}
+.card{
+    display: flex;
+    justify-content: baseline;
+}

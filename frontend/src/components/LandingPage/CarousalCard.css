@@ -1,0 +1,12 @@
+.Caraousal-card-container{
+  margin: auto;
+  text-align: center;
+  /* line-height: 180%; */
+  border: 1px solid red;
+  align-items: center;
+
+}
+.Caraousal-card-container>img{
+    margin: auto;
+ 
+  }
