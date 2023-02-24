@@ -4,7 +4,11 @@ import axios from "axios";
 import { shallowEqual, useSelector } from "react-redux";
 import { Box, Text } from "@chakra-ui/react";
 import SingleMobileCard from "./SingleMobileCard";
+import {styled} from "@mui/material"
 
+const Component=styled(Box)`
+  background:#f2f2f2
+`
 export default function SingleMobile() {
   const [data, setdata] = useState([]);
   const { isloading, product } = useSelector((store) => {
@@ -16,7 +20,7 @@ export default function SingleMobile() {
   const params = useParams();
   const getsingledata = (id) => {
     axios
-      .get(`https://dummyjson.com/products/${id}`)
+      .get(`http://localhost:8080/products/${id}`)
       .then((res) => {
         console.log(res);
         setdata(res.data);
@@ -29,16 +33,16 @@ export default function SingleMobile() {
   useEffect(() => {
     getsingledata(params.id);
   }, [params.id]);
-  console.log("20", data);
+ 
   return (
-    <Box>
+    <Box >
       {
-        <Box>
-          <Box>
+        <div style={{background:"f2f2f2",marginTop:"55px"}}> 
+          <div >
             <SingleMobileCard {...data} />
-          </Box>
-          <Box></Box>
-        </Box>
+          </div>
+         
+        </div>
       }
     </Box>
   );

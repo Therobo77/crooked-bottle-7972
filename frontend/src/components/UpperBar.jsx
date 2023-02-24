@@ -1,10 +1,42 @@
 import { Box, Button, Flex, Heading } from "@chakra-ui/react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useSearchParams } from "react-router-dom";
+import { sortAsc, sortDesc } from "../Redux/ProductReducer/action";
 
 export default function UpperBar() {
+  const dispatch=useDispatch()
+const[searchParams,setSearchParams]=useSearchParams()
+
+const init=searchParams.get("order")
+const [order,setorder]=useState(init||"")
+
+useEffect(()=>{
+  if(order=='asc'){
+
+    dispatch(sortAsc())
+  }
+  if(order=='desc'){
+    dispatch(sortDesc())
+
+  }
+},[order])
+useEffect(()=>{
+  let params={}
+  order && (params.order=order)
+  setSearchParams(params)
+  
+},[order])
+  const handleSort=(e)=>{
+    setorder(e.target.value)
+  }
+
+  console.log(order);
   return (
     <div className="col-md-12 col-3">
       <Heading as="h1" size="md">
-        Babo Botanicals Beauty And Grooming
+        Mobile's
       </Heading>
 
       <div
@@ -14,9 +46,13 @@ export default function UpperBar() {
           width: "50%",
         }}
       >
-        <Heading size="sm">Sort By</Heading>
-        <button>Price--Low to High</button>
-        <button>Price--High to Low</button>
+        <Heading size="sm">Sort By Price</Heading>
+        <label>asc</label>
+        <input type="radio" name="order" value={'asc'} onChange={(e)=>handleSort(e)}/>
+        <label >desc</label>
+        <input type="radio" name="order" value={'desc'} onChange={(e)=>handleSort(e)}  />
+        {/* <button>Price--Low to High</button>
+        <button>Price--High to Low</button> */}
       </div>
     </div>
   );
