@@ -11,6 +11,7 @@ import Register from './../login/Register';
 import Password from './../login/Password';
 import Recovery from './../login/Recovery';
 import SingleMobile from "./Mobile/SingleMobile";
+import Header from "../components/LandingPage/Header/Header";
 
 
 const MainRoute = () => {
@@ -28,6 +29,7 @@ const MainRoute = () => {
         <Route path="/password" element={<Password />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/recovery" element={<Recovery />}></Route>
+        <Route path="/header" element={ <Header/> }></Route>
         
         <Route path="/deliverypage" element={<DeliveryPage />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
