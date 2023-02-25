@@ -18,7 +18,7 @@ export default function Register() {
   const formik = useFormik({
     initialValues : {
       email: 'vikash7722@gmail.com',
-      username: 'example123',
+      Username: 'example123',
       password : 'admin@123'
     },
     validate : registerValidation,
@@ -71,7 +71,7 @@ export default function Register() {
 
               <div className="textbox flex flex-col items-center gap-6">
                   <input {...formik.getFieldProps('email')} className={styles.textbox} type="text" placeholder='Email*' />
-                  <input {...formik.getFieldProps('username')} className={styles.textbox} type="text" placeholder='Username*' />
+                  <input {...formik.getFieldProps('Username')} className={styles.textbox} type="text" placeholder='Username*' />
                   <input {...formik.getFieldProps('password')} className={styles.textbox} type="text" placeholder='Password*' />
                   <button className={styles.btn} type='submit'>Register</button>
               </div>
