@@ -25,7 +25,7 @@ export default function MobileCard({
   rating,
   brand,
   category,
-  images,
+  thumbnail,
 }) {
   return (
     <>
@@ -36,8 +36,8 @@ export default function MobileCard({
               <Center>
                 <Image
                   boxSize="200px"
-                  src={images[0]}
-                  alt={images}
+                  src={thumbnail}
+                  alt={thumbnail}
                   borderRadius="lg"
                 />
               </Center>
