@@ -14,7 +14,7 @@ const Password = () => {
     validate: passwordValidate,
     validateOnBlur: false,
     validateOnChange: false,
-    onSubmit: async values => {
+    onSubmit: async (values) => {
       console.log("values", values);
     },
   });
@@ -40,22 +40,21 @@ const Password = () => {
 
             <div className="textbox flex flex-col items-center gap-6">
               <input
-                {...formik.getFieldProps('password')}
+                {...formik.getFieldProps("password")}
                 className={styles.textbox}
-                type="text"
+                type="password"
                 placeholder="Password"
               />
               <button className={styles.btn} type="submit">
-                {" "}
-                Let's Go!
+                Sign In
               </button>
             </div>
 
             <div className="text-center py-4">
               <span className="text-gray-500">
-                Not a Member!
+                Forgot Password    .
                 <Link className="text-red-500" to="/recovery">
-                  Recover Password .?
+                  Recover Now .?
                 </Link>
               </span>
             </div>
