@@ -2,7 +2,7 @@ export const bannerData = [
     { id: 1, url: 'https://rukminim1.flixcart.com/flap/3376/560/image/d117a62eb5fbb8e1.jpg?q=50' },
     { id: 2, url: 'https://rukminim1.flixcart.com/flap/3376/560/image/57267a180af306fe.jpg?q=50' },
     { id: 3, url: 'https://rukminim1.flixcart.com/flap/3376/560/image/ae9966569097a8b7.jpg?q=50' },
-    { id: 4, url: 'https://rukminim1.flixcart.com/flap/3376/560/image/f6202f13b6f89b03.jpg?q=50' }
+    { id: 4, url: 'https://rukminim1.flixcart.com/flap/3376/560/image/f6202f13b6f89b03.jpg?q=50' },
 ]
 
 export const electronics=[
@@ -167,7 +167,7 @@ export const clothes=[
     "title": "Sweet and Mices",
     "offer_price": "Min. 50% Off",
     "desc": "",
-    "category": ""
+    "category": "clothes"
   },
   {
     "id": 10,
@@ -175,7 +175,7 @@ export const clothes=[
     "title": "Women's Lehenga Cholis",
     "offer_price": "Min. 50% Off",
     "desc": "",
-    "category": ""
+    "category": "clothes"
   },
   {
     "id": 11,
@@ -183,7 +183,7 @@ export const clothes=[
     "title": "Rangoli Powder",
     "offer_price": "Best Seller",
     "desc": "",
-    "category": ""
+    "category": "clothes"
   }
 ]
 

@@ -43,7 +43,7 @@ const Banner = () => {
           draggable={false}
           infinite={true}
           autoPlay={ true }
-          autoPlaySpeed={4000}
+          autoPlaySpeed={3000}
         >
           {bannerData.map((data, index) => {
             return <Image key={index} src={data.url} alt="banner source" />;
