@@ -11,7 +11,11 @@ import Register from './../login/Register';
 import Password from './../login/Password';
 import Recovery from './../login/Recovery';
 import SingleMobile from "./Mobile/SingleMobile";
+
+
+
 import Reset from './../login/Reset';
+
 
 
 const MainRoute = () => {
@@ -29,7 +33,9 @@ const MainRoute = () => {
         <Route path="/password" element={<Password />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/recovery" element={<Recovery />}></Route>
+
         <Route path="/reset" element={<Reset />}></Route>
+
         
         <Route path="/deliverypage" element={<DeliveryPage />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
