@@ -1,7 +1,9 @@
+
 import { Box } from "@mui/system";
 import React from "react";
 import Banner from "../components/LandingPage/Banner";
 import Navbar from "../components/Navbar";
+
 import Slides from "../components/LandingPage/Slides";
 import { styled } from "@mui/material";
 
@@ -21,6 +23,7 @@ const Component = styled(Box)`
   padding: 10px 10px;
   background: #f2f2f2;
 `;
+
 
 const HomePage = () => {
   return (
