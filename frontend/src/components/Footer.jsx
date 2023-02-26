@@ -56,7 +56,7 @@ export default function Footer() {
             <Link href={"#"}>Contact Us</Link>
 
             <Link href={"#"}>Careers</Link>
-            <Link href={"#"}>Flipkart Stories</Link>
+            <Link href={"#"}>YouKart Stories</Link>
             <Link href={"#"}>Press</Link>
             <Link href={"#"}>Flipkart Wholesale</Link>
 
@@ -88,7 +88,7 @@ export default function Footer() {
           <Box borderLeft="1px solid" borderColor="gray.400">
             <Stack align={"flex-start"} marginLeft="20%">
               <ListHeader>Mail Us:</ListHeader>
-              <Link >Flipkart Internet Private Limited,</Link>
+              <Link >YouKart Internet Private Limited,</Link>
               <Link>Buildings Alyssa, Begonia &</Link>
               <Link >Clove Embassy Tech Village,</Link>
               <Link >Outer Ring Road, Devarabeesanahalli Village,</Link>
@@ -99,7 +99,7 @@ export default function Footer() {
           </Box>
           <Stack align={"flex-start"}>
             <ListHeader>Registered Office Address:</ListHeader>
-            <Link href={"#"}>Flipkart Internet Private Limited,</Link>
+            <Link href={"#"}>YouKart Internet Private Limited,</Link>
             <Link href={"#"}>Buildings Alyssa, Begonia &</Link>
             <Link href={"#"}>Clove Embassy Tech Village,</Link>
             <Link href={"#"}>Outer Ring Road, Devarabeesanahalli Village,</Link>
