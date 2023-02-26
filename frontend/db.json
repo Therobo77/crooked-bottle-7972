@@ -4,7 +4,7 @@
       "id": 1,
       "title": "iPhone 9",
       "description": "An apple mobile which is nothing like apple",
-      "price": "6000",
+      "price": 6000,
       "discountPercentage": 12.96,
       "rating": 4.69,
       "stock": 94,
@@ -16,7 +16,7 @@
       "id": 2,
       "title": "iPhone X",
       "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-      "price": "90000",
+      "price": 90000,
       "discountPercentage": 17.94,
       "rating": 4.44,
       "stock": 34,
@@ -350,15 +350,16 @@
     },
     {
       "image": "",
-      "brand": "suzuki",
-      "price": "3000",
-      "description": "sfffsfsfsfsf",
+      "brand": "iqoo",
+      "price": 2000,
+      "description": "beast smartphone",
       "category": "smartphone",
       "rating": "4.5",
       "stock": "10",
       "thumbnail": "https://i.dummyjson.com/data/products/30/3.jpg",
-      "title": "werfwef",
+      "title": "iqoo",
       "id": 31
     }
-  ]
+  ],
+  "carts": []
 }

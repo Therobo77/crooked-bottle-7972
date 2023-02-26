@@ -5,7 +5,7 @@ import { addProduct } from "../../Redux/AdminProductReducer/action";
 let initialState = {
   image: "",
   brand: "",
-  price: "",
+  price: 0,
   description: "",
   category: "",
   rating: "",
@@ -25,7 +25,7 @@ const AddProduct = () => {
     setProduct((prev) => {
       return {
         ...prev,
-        [name]: value,
+        [name]: name === "price" ? +value : value,
       };
     });
   };

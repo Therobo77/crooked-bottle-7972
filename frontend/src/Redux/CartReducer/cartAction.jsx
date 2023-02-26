@@ -31,7 +31,7 @@ export const getAllCart = () => (dispatch) => {
 export const removeItemCart = (id) => (dispatch) => {
   dispatch(cartRequest());
   axios
-    .delete(`https://diva-mock-server.onrender.com/all_products/${id}`)
+    .delete(`http://localhost:8080/carts/${id}`)
     .then((res) => {
       console.log(res);
     })
