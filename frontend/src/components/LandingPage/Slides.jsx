@@ -45,19 +45,19 @@ const Slides = ({ products }) => {
   const handleCategory = (category) => {
     console.log(category);
     if (category === "clothes") {
-      //  navigate("/fashion")
+       navigate("/Fashion-Page")
     } else if (category === "electronics") {
       navigate("/mobile-page");
     } else if (category === "Healthcare") {
-      // navigate("/")
+      navigate("/Grocery-page")
     } else if (category === "Styles") {
-      // navigate("/")
+      navigate("/Fashion-Page")
     } else if (category === "Appliances") {
-      // navigate("/")
+      navigate("/appliances-page")
     } else if (category === "Fashion") {
-      // navigate("/")
+      navigate("/Fashion-Page")
     } else if (category === "Best Seller") {
-      // navigate("/")
+      navigate("/electronics-page")
     }
   };
 

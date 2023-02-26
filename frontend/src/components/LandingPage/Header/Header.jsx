@@ -20,7 +20,7 @@ const Header = () => {
         <button>Log in</button>
       </div>
       <div className="header_admin">
-        <p>Become A Seller</p>
+        <p>Admin</p>
       </div>
       <div className="header_more">
         <p>More</p>
