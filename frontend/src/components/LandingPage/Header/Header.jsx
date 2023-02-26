@@ -4,6 +4,10 @@ import logo from "../../../assets/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
+import { Link } from "react-router-dom";
+
+
 import {
   Menu,
   MenuButton,
@@ -45,10 +49,11 @@ const Header = () => {
       </div>
       <div className="header_admin">
 
-        <p>Admin</p>
-
+        <Link to="/admin">
+          <p>Become A Seller</p>
+        </Link>
       </div>
-      <div className="header_more">
+           <div className="header_more">
       <Menu>
           <MenuButton _hover={"curser:pointer "} >
             More
@@ -64,9 +69,17 @@ const Header = () => {
         <ExpandMoreIcon />
       </div>
       <div className="header_cart">
-        <ShoppingCartIcon />
-        <p>cart</p>
+        <Link to="/cart">
+          <ShoppingCartIcon />
+          <p>cart</p>
+        </Link>
+
+
+        <p>Admin</p>
+
       </div>
+
+  
     </div>
   );
 };
