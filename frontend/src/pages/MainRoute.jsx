@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-
 import HomePage from "./HomePage";
 import MobilePage from "./Mobile/MobilePage";
 import PageNotFound from "./PageNotFound";
@@ -16,6 +15,7 @@ import SingleMobile from "./Mobile/SingleMobile";
 
 import Reset from './../login/Reset';
 import SingleFashion from "./Fashion/SingleFashion";
+import Profile from "../login/Profile";
 
 
 
@@ -37,6 +37,7 @@ const MainRoute = () => {
         <Route path="/recovery" element={<Recovery />}></Route>
 
         <Route path="/reset" element={<Reset />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
 
         
         <Route path="/deliverypage" element={<DeliveryPage />}></Route>

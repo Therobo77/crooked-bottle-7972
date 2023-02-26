@@ -87,10 +87,11 @@ function emailVerify(error ={}, values){
 
 
 /** validate profile page */
-// export async function profileValidation(values){
-//     const errors = emailVerify({}, values);
-//     return errors;
-// }
+
+export async function profileValidation(values){
+    const errors = emailVerify({}, values);
+    return errors;
+}
 
 
 /** ************************************************* */

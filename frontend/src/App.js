@@ -8,11 +8,11 @@ import Header from "./components/LandingPage/Header/Header";
 function App() {
   return (
     <div className="App">
-      <Header/>
+      {/* <Header/> */}
       {/* <Navbar /> */}
 
       <MainRoute />
-      <Footer/>
+      {/* <Footer/> */}
 
     </div>
   );
