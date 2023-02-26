@@ -20,7 +20,7 @@ export default function SingleMobile() {
   const params = useParams();
   const getsingledata = (id) => {
     axios
-      .get(`http://localhost:8080/products/${id}`)
+      .get(`https://light-ant-sock.cyclic.app/products/${id}`)
       .then((res) => {
         console.log(res);
         setdata(res.data);
