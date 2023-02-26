@@ -15,6 +15,7 @@ import SingleMobile from "./Mobile/SingleMobile";
 
 
 import Reset from './../login/Reset';
+import SingleFashion from "./Fashion/SingleFashion";
 
 
 
@@ -26,6 +27,7 @@ const MainRoute = () => {
 
         <Route path="/mobile-page" element={<MobilePage />}></Route>
         <Route path="/single/:id" element={<SingleMobile />} />
+      
         <Route path="/cart" element={<Cart />}></Route>
         
         {/* Vikash Route */}

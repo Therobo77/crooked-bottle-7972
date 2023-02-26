@@ -1,7 +1,7 @@
 import { Box, Button, Heading, Image, Text, Icon } from "@chakra-ui/react";
 import { styled } from "@mui/material";
 import { FaCartPlus, FaRupeeSign } from "react-icons/fa";
-export default function SingleMobileCard(data) {
+export default function SingleGroceryCard(data) {
   console.log("mate", data);
   const LeftContainer = styled(Box)`
     min-width: 40%;
