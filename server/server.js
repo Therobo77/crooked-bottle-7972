@@ -37,3 +37,8 @@ connect().then(() => {
     console.log("Invalid database connection...!");
 })
 
+
+
+app.listen(port, () => {
+    console.log(`Server connected to http://localhost:${port}`);
+})
