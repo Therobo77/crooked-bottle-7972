@@ -16,6 +16,12 @@ import DashboardMain from "./Admin/DashboardMain";
 import ProductList from "./Admin/ProductList";
 import AdminAddProduct from "./Admin/AdminAddProduct";
 
+
+import Reset from './../login/Reset';
+import SingleFashion from "./Fashion/SingleFashion";
+
+
+
 const MainRoute = () => {
   return (
     <div>
@@ -23,6 +29,7 @@ const MainRoute = () => {
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/mobile-page" element={<MobilePage />}></Route>
         <Route path="/single/:id" element={<SingleMobile />} />
+      
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/admin" element={<DashboardMain />} />
         <Route path="/product-list" element={<ProductList />} />
@@ -34,6 +41,7 @@ const MainRoute = () => {
         <Route path="/register" element={<Register />}></Route>
         <Route path="/recovery" element={<Recovery />}></Route>
 
+        <Route path="/reset" element={<Reset />}></Route>
         <Route path="/deliverypage" element={<DeliveryPage />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
