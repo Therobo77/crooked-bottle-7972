@@ -1,8 +1,8 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCart, removeItemCart } from "../../Redux/CartReducer/cartAction";
-import { payUsingPaytm } from "../Payment/payment";
-import { post } from "../Payment/utils/paytm";
+
 const Cart = () => {
   const dispatch = useDispatch();
 
@@ -30,15 +30,22 @@ const Cart = () => {
   };
 
   const buyNow = async () => {
-    let response = await payUsingPaytm({
-      amount: 554,
-      email: "rohit@gmail.com",
-    });
-    let information = {
-      action: "https://securegw-stage.paytm.in/order/process",
-      params: response,
+    console.log("payment");
+
+    const paymentData = {
+      purpose: "Test payment",
+      amount: 10,
     };
-    post(information);
+
+    axios
+      .post("https://instamojo-test-1s1j.vercel.app/pay", paymentData)
+      .then((res) => {
+        console.log("res", res.data);
+        // window.location.href = res.data;
+      })
+      .catch((err) => {
+        console.log("payment error", err);
+      });
   };
 
   return (
