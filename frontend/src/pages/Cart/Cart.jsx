@@ -2,8 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCart, removeItemCart } from "../../Redux/CartReducer/cartAction";
-import { payUsingPaytm } from "../Payment/payment";
-import { post } from "../Payment/utils/paytm";
+
 const Cart = () => {
   const dispatch = useDispatch();
 
@@ -39,16 +38,13 @@ const Cart = () => {
     };
 
     axios
-      .post(
-        "https://cors-anywhere.herokuapp.com/http://localhost:7070/pay",
-        paymentData
-      )
+      .post("https://instamojo-test-1s1j.vercel.app/pay", paymentData)
       .then((res) => {
         console.log("res", res.data);
         // window.location.href = res.data;
       })
       .catch((err) => {
-        console.log(err);
+        console.log("payment error", err);
       });
   };
 

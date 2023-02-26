@@ -241,18 +241,6 @@
       "thumbnail": "https://i.dummyjson.com/data/products/20/thumbnail.jpg"
     },
     {
-      "id": 21,
-      "title": "- Daal Masoor 500 grams",
-      "description": "Fine quality Branded Product Keep in a cool and dry place",
-      "price": 20,
-      "discountPercentage": 4.81,
-      "rating": 4.44,
-      "stock": 133,
-      "brand": "Saaf & Khaas",
-      "category": "groceries",
-      "thumbnail": "https://i.dummyjson.com/data/products/21/thumbnail.png"
-    },
-    {
       "id": 22,
       "title": "Elbow Macaroni - 400 gm",
       "description": "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
@@ -359,6 +347,18 @@
       "brand": "Golden",
       "category": "home-decoration",
       "thumbnail": "https://i.dummyjson.com/data/products/30/thumbnail.jpg"
+    },
+    {
+      "image": "",
+      "brand": "suzuki",
+      "price": "3000",
+      "description": "sfffsfsfsfsf",
+      "category": "smartphone",
+      "rating": "4.5",
+      "stock": "10",
+      "thumbnail": "https://i.dummyjson.com/data/products/30/3.jpg",
+      "title": "werfwef",
+      "id": 31
     }
   ]
 }

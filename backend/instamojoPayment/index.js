@@ -2,8 +2,10 @@ const http = require("http");
 const express = require("express");
 const bid = require("./bid");
 const port = 7070;
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 app.use("/pay", bid);
 
 // Create a server object:
