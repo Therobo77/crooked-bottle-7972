@@ -1,6 +1,6 @@
-import { Box, Button, Heading, Image, Text,Icon } from "@chakra-ui/react";
+import { Box, Button, Heading, Image, Text, Icon } from "@chakra-ui/react";
 import { styled } from "@mui/material";
-import { FaCartPlus, FaRupeeSign} from "react-icons/fa";
+import { FaCartPlus, FaRupeeSign } from "react-icons/fa";
 export default function SingleGroceryCard(data) {
   console.log("mate", data);
   const LeftContainer = styled(Box)`
@@ -15,12 +15,17 @@ export default function SingleGroceryCard(data) {
   });
 
   return (
-    <div className="m-4" style={{ display: "flex",padding: "15px 20px",
-    border: "1px solid #f0f0f0",
-    width: "100%", }}>
-      <div
-      >
-        <Image  src={data.thumbnail} />
+    <div
+      className="m-4"
+      style={{
+        display: "flex",
+        padding: "15px 20px",
+        border: "1px solid #f0f0f0",
+        width: "100%",
+      }}
+    >
+      <div>
+        <Image src={data.thumbnail} />
         <Button
           leftIcon={<FaCartPlus />}
           style={{
@@ -28,7 +33,7 @@ export default function SingleGroceryCard(data) {
             color: "white",
             marginLeft: "8%",
             width: "30%",
-            marginTop:"5%",
+            marginTop: "5%",
           }}
         >
           Add to Cart
@@ -38,7 +43,7 @@ export default function SingleGroceryCard(data) {
             background: "#fb641b",
             color: "white",
             marginLeft: "8%",
-            marginTop:"5%",
+            marginTop: "5%",
             width: "30%",
           }}
         >
@@ -46,22 +51,76 @@ export default function SingleGroceryCard(data) {
         </Button>
       </div>
 
-      {/* <div className="row">
-        {data.images &&
-          data.images.map((item) => {
-            return (
-              <div className="col-2">
-                <img src={item} />
-              </div>
-            );
-          })}
-      </div> */}
-      <div style={{marginLeft:"10%"}}>
+      <div style={{ marginLeft: "10%" }}>
         <Heading>{data.title}</Heading>
-       <Text><Icon as={FaRupeeSign}/> {data.price}</Text>
-       {/* <Text fontWeight={"bold"} >Price:{data.price}</Text></Icon> */}
+        <Text fontWeight={"bold"} fontSize={"2xl"}>
+          <Icon as={FaRupeeSign} /> {data.price}{" "}
+          <span className="text-success fs-6 ms-2">
+            {data.discountPercentage} % off
+          </span>
+        </Text>
         <p>Description:{data.description}</p>
-        <p>rating :{data.rating}</p>
+        <div style={{ display: "flex", marginTop: "10px" }}>
+          <p>
+            <span
+              style={{ borderRadius: "19px" }}
+              class="badge text-bg-success  p-2 "
+            >
+              {data.rating} <i class="bi bi-star-fill ps-2"></i>
+            </span>{" "}
+          </p>
+          <img
+            style={{ scale: "0.3", marginTop: "-3%", marginLeft: "-10%" }}
+            src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png"
+            alt=""
+          />
+        </div>
+        <p>Available offers</p>
+      
+        <div className="row">
+          <div className="col-1"><img style={{ scale: "0.6"}}
+              src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+              alt=""
+            /></div>
+          <div className="col-11"><span style={{ marginLeft:"-15px"}}>
+          Special PriceGet at flat ₹449T&C
+          </span></div>
+          
+         
+        </div>
+        <div className="row">
+          <div className="col-1"><img style={{ scale: "0.6"}}
+              src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+              alt=""
+            /></div>
+          <div className="col-11"><span style={{ marginLeft:"-15px"}}>
+          Buy this Product and Get Extra ₹500 Off on Bikes & ScootersT&C
+          </span></div>
+          
+         
+        </div>        <div className="row">
+          <div className="col-1"><img style={{ scale: "0.6"}}
+              src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+              alt=""
+            /></div>
+          <div className="col-11"><span style={{ marginLeft:"-15px"}}>
+          Partner OfferSign up for Flipkart Pay Later and get Flipkart Gift Card worth up to ₹500*Know More
+          </span></div>
+          
+         
+        </div>        <div className="row">
+          <div className="col-1"><img style={{ scale: "0.6"}}
+              src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
+              alt=""
+            /></div>
+          <div className="col-11"><span style={{ marginLeft:"-15px"}}>
+              Bank Offer10% instant discount on PNB Credit Card, up to ₹1500, on
+            orders of ₹5,000
+          </span></div>
+        </div>
+      
+       
+        
       </div>
     </div>
   );
