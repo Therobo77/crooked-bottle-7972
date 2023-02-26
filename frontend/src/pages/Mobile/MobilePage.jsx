@@ -29,7 +29,7 @@ export default function MobilePage() {
       <div className="col-md-9 col-12">
         <div className="row">
           <div className="col-12">
-            <UpperBar />
+            <UpperBar {...data} />
           </div>
           <div className="row">
           {data.length>0 && data.filter((el)=>{
