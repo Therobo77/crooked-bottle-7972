@@ -44,7 +44,7 @@ const Header = () => {
         {/* <button>Log in</button> */}
       </div>
       <div className="header_admin">
-        <p>Become A Seller</p>
+        <p>Become A Seller </p>
       </div>
       <div className="header_more">
       <Menu>
@@ -56,7 +56,7 @@ const Header = () => {
             <MenuItem>24x7 Customer Care</MenuItem>
             <MenuItem>Advertise</MenuItem>
             <MenuItem>Download</MenuItem>
-    
+
           </MenuList>
         </Menu>
         <ExpandMoreIcon />
