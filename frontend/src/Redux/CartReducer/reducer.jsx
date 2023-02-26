@@ -7,6 +7,7 @@ import {
 const initialState = {
   isLoading: false,
   carts: [],
+  cartItem: [],
   totalPrice: 0,
   delivery: 50,
   isError: false,

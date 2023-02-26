@@ -7,15 +7,20 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   const allCart = useSelector((store) => {
-    return store.CartReducer.carts;
+    return store.CartReducer.cartItem;
     // console.log(store);
   });
   console.log("allCart", allCart);
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState([]);
   const [delivery, setDelivery] = useState(40);
   const [total, setTotal] = useState(0);
-  console.log("price", price);
-  let subtotal = price + delivery;
+
+  let totalPrice = Number(0);
+  for (let i = 0; i < allCart.length; i++) {
+    totalPrice += allCart[i].price;
+  }
+
+  let subtotal = Number(totalPrice) + Number(delivery);
 
   useEffect(() => {
     dispatch(getAllCart());
@@ -50,7 +55,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="col-10 mx-auto mt-3">
+      <div className="col-10 mx-auto mt-5 mb-5">
         <div className="row">
           <div className="col-md-8 col-12">
             <div className="card p-3">
@@ -63,7 +68,7 @@ const Cart = () => {
                         <div key={el.id} className="card p-3 mt-2">
                           <div className="row">
                             <div className="col-2">
-                              <img src={el.image} alt="" />
+                              <img src={el.thumbnail} alt={el.title} />
                             </div>
                             <div className="col-10">
                               <h5>{el.productName}</h5>
@@ -131,9 +136,9 @@ const Cart = () => {
               <h3 className="mb-3">PRICE DETAILS</h3>
               <div className="row mb-3">
                 <div className="col-6">
-                  <p>Price (1 item)</p>
+                  <p>Price </p>
                 </div>
-                <div className="col-6 text-end">{price}</div>
+                <div className="col-6 text-end">{totalPrice}</div>
               </div>
               <div className="row mb-3">
                 <div className="col-6">
