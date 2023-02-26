@@ -58,7 +58,7 @@ export default function Footer() {
             <Link href={"#"}>Careers</Link>
             <Link href={"#"}>YouKart Stories</Link>
             <Link href={"#"}>Press</Link>
-            <Link href={"#"}>Flipkart Wholesale</Link>
+            <Link href={"#"}>YouKart Wholesale</Link>
 
             <Link href={"#"}>Corporate Information</Link>
           </Stack>

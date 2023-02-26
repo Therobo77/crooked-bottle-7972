@@ -9,7 +9,7 @@ import UpperBar from "../../components/UpperBar";
 import { useLocation, useSearchParams } from "react-router-dom";
 import AppliancesCard from "./AppliancesCard";
 
-export default function MobilePage() {
+export default function AppliancesPage() {
   const data=useSelector((store)=>store.productReducer.products)
     console.log(data)
     const [searchParams,setSearchParams]= useSearchParams();
