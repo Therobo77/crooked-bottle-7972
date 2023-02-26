@@ -33,6 +33,7 @@ export const getProductData= (dispatch) => {
     .then((res) => {
       // console.log("redux",res.data);
       dispatch(getSuccessMovie(res.data));
+      console.log(res.data)
     })
     .catch((e) => {
       dispatch(getFailureMovie());

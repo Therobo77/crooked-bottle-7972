@@ -3,8 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import "../Mobile/MobilePage.css";
 import { useEffect } from "react";
 import { getProductData } from "../../Redux/ProductReducer/action";
+import { Box } from '@mui/system';
+import {styled} from "@mui/material" 
 
-import MobileCard from "./MobileCard";
+
+
 import UpperBar from "../../components/UpperBar";
 import { useLocation, useSearchParams } from "react-router-dom";
 import AppliancesCard from "./AppliancesCard";
@@ -19,7 +22,11 @@ export default function AppliancesPage() {
     useEffect(()=>{
         dispatch(getProductData)
     },[])
-    
+
+    const Component =styled(Box)`
+      padding:10px 10px;
+      background:#f2f2f2;
+      `
   return (
   
     <div className="row">
@@ -32,7 +39,7 @@ export default function AppliancesPage() {
           <div className="col-12">
             <UpperBar />
           </div>
-          <div className="row">
+          <Component className="row">
           {data.length>0 && data.filter((el)=>{
             if(Cat.length>0){
                 return Cat.includes(el.category);
@@ -59,7 +66,7 @@ export default function AppliancesPage() {
                   return false;
                 }
               })} */}
-          </div>
+          </Component>
         </div>
       </div>
     </div>
