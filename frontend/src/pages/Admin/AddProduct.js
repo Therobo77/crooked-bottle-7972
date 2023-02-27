@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addProduct } from "./Redux/ProductReducer/action";
+import { addProduct } from "../../Redux/AdminProductReducer/action";
 let initialState = {
   image: "",
   brand: "",
-  price: "",
+  price: 0,
   description: "",
   category: "",
   rating: "",
@@ -25,7 +25,7 @@ const AddProduct = () => {
     setProduct((prev) => {
       return {
         ...prev,
-        [name]: value,
+        [name]: name === "price" ? +value : value,
       };
     });
   };
@@ -33,7 +33,7 @@ const AddProduct = () => {
     e.preventDefault();
     dispatch(addProduct(product));
     setProduct(initialState);
-    navigate("/tables");
+    navigate("/product-list");
   };
   return (
     <>
@@ -184,11 +184,8 @@ const AddProduct = () => {
                   </div>
                 </div>
               </div>
-              <div class="mt-3">
-                <button
-                  class="btn btn-gray-800 mt-2 animate-up-2"
-                  type="submit"
-                >
+              <div class="mt-3 text-end">
+                <button class="btn btn-warning mt-2 animate-up-2" type="submit">
                   Save Product
                 </button>
               </div>

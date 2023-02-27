@@ -41,15 +41,15 @@ export default function Sidebar() {
    
 
     return(
-        <div className="sidebar">
+        <div className="sidebar-App">
                 <Box className="left-mobile">
-                    <Heading as='h2' size='lg'>Filter By CATEGORIES</Heading>
-                    <Text>CATEGORIES</Text>
+                    <Heading as='h2' size='l' marginBottom={"10px"}>Filter By CATEGORIES</Heading>
+                    {/* <Text>CATEGORIES</Text> */}
                     {
                         localCate?.map((el,id)=>{
                             return(
                                 <div key={id}>
-                                    <input type="checkbox"
+                                    <input type="checkbox" className="form-check-input me-3"
                                     value={el}
                                     checked={category.includes(el)}
                                     onChange={handlechange} />

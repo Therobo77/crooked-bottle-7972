@@ -1,34 +1,34 @@
 import {
-  GET_DATA_FAILURE,
-  GET_DATA_REQUEST,
-  GET_DATA_SUCCESS,
-  POST_PRODUCT_SUCCESS,
-  DELETE_PRODUCT_SUCCESS,
+  ADMIN_GET_DATA_FAILURE,
+  ADMIN_GET_DATA_REQUEST,
+  ADMIN_GET_DATA_SUCCESS,
+  ADMIN_POST_PRODUCT_SUCCESS,
+  ADMIN_DELETE_PRODUCT_SUCCESS,
 } from "./actionType";
 import axios from "axios";
 export const getRequestProduct = () => {
-  return { type: GET_DATA_REQUEST };
+  return { type: ADMIN_GET_DATA_REQUEST };
 };
 export const postProductSuccess = (payload) => {
-  return { type: POST_PRODUCT_SUCCESS };
+  return { type: ADMIN_POST_PRODUCT_SUCCESS };
 };
 
 export const getSuccessProduct = (payload) => {
-  return { type: GET_DATA_SUCCESS, payload };
+  return { type: ADMIN_GET_DATA_SUCCESS, payload };
 };
 
 export const getFailureProduct = () => {
-  return { type: GET_DATA_FAILURE };
+  return { type: ADMIN_GET_DATA_FAILURE };
 };
 
 export const deleteProductSuccess = (payload) => {
-  return { type: DELETE_PRODUCT_SUCCESS };
+  return { type: ADMIN_DELETE_PRODUCT_SUCCESS };
 };
 
 export const getProductData = (dispatch) => {
   dispatch(getRequestProduct());
   axios
-    .get(`http://localhost:7070/products`)
+    .get(`https://light-ant-sock.cyclic.app/products`)
     .then((res) => {
       console.log(res.data);
       dispatch(getSuccessProduct(res.data));
@@ -40,7 +40,7 @@ export const getProductData = (dispatch) => {
 export const addProduct = (payload) => (dispatch) => {
   dispatch(getRequestProduct());
   axios
-    .post("http://localhost:7070/products", payload)
+    .post("https://light-ant-sock.cyclic.app/products", payload)
     .then(() => {
       dispatch(postProductSuccess());
     })
@@ -51,7 +51,7 @@ export const addProduct = (payload) => (dispatch) => {
 export const deleteProductData = (id) => (dispatch) => {
   dispatch(getRequestProduct());
   axios
-    .delete(`http://localhost:7070/products/${id}`)
+    .delete(`https://light-ant-sock.cyclic.app/products/${id}`)
     .then((res) => {
       console.log(res.data);
     })

@@ -1,7 +1,14 @@
 import { Box, Button, Heading, Image, Text, Icon } from "@chakra-ui/react";
 import { styled } from "@mui/material";
 import { FaCartPlus, FaRupeeSign } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 export default function SingleAppliancesCard(data) {
+  const navigate = useNavigate();
+  const allCartItem = useSelector((store) => {
+    return store.CartReducer.cartItem;
+  });
+  console.log("allCart", allCartItem);
   console.log("mate", data);
   const LeftContainer = styled(Box)`
     min-width: 40%;
@@ -14,6 +21,11 @@ export default function SingleAppliancesCard(data) {
     width: "100%",
   });
 
+  const moveToCart = (data) => {
+    console.log(data);
+    allCartItem.push(data);
+    navigate("/cart");
+  };
   return (
     <div
       className="m-4"
@@ -35,6 +47,7 @@ export default function SingleAppliancesCard(data) {
             width: "30%",
             marginTop: "5%",
           }}
+          onClick={() => moveToCart(data)}
         >
           Add to Cart
         </Button>
@@ -76,51 +89,64 @@ export default function SingleAppliancesCard(data) {
           />
         </div>
         <p>Available offers</p>
-      
         <div className="row">
-          <div className="col-1"><img style={{ scale: "0.6"}}
+          <div className="col-1">
+            <img
+              style={{ scale: "0.6" }}
               src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
               alt=""
-            /></div>
-          <div className="col-11"><span style={{ marginLeft:"-15px"}}>
-          Special PriceGet at flat ₹449T&C
-          </span></div>
-          
-         
+            />
+          </div>
+          <div className="col-11">
+            <span style={{ marginLeft: "-15px" }}>
+              Special PriceGet at flat ₹449T&C
+            </span>
+          </div>
         </div>
         <div className="row">
-          <div className="col-1"><img style={{ scale: "0.6"}}
+          <div className="col-1">
+            <img
+              style={{ scale: "0.6" }}
               src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
               alt=""
-            /></div>
-          <div className="col-11"><span style={{ marginLeft:"-15px"}}>
-          Buy this Product and Get Extra ₹500 Off on Bikes & ScootersT&C
-          </span></div>
-          
-         
-        </div>        <div className="row">
-          <div className="col-1"><img style={{ scale: "0.6"}}
+            />
+          </div>
+          <div className="col-11">
+            <span style={{ marginLeft: "-15px" }}>
+              Buy this Product and Get Extra ₹500 Off on Bikes & ScootersT&C
+            </span>
+          </div>
+        </div>{" "}
+        <div className="row">
+          <div className="col-1">
+            <img
+              style={{ scale: "0.6" }}
               src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
               alt=""
-            /></div>
-          <div className="col-11"><span style={{ marginLeft:"-15px"}}>
-          Partner OfferSign up for Flipkart Pay Later and get Flipkart Gift Card worth up to ₹500*Know More
-          </span></div>
-          
-         
-        </div>        <div className="row">
-          <div className="col-1"><img style={{ scale: "0.6"}}
+            />
+          </div>
+          <div className="col-11">
+            <span style={{ marginLeft: "-15px" }}>
+              Partner OfferSign up for Flipkart Pay Later and get Flipkart Gift
+              Card worth up to ₹500*Know More
+            </span>
+          </div>
+        </div>{" "}
+        <div className="row">
+          <div className="col-1">
+            <img
+              style={{ scale: "0.6" }}
               src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90"
               alt=""
-            /></div>
-          <div className="col-11"><span style={{ marginLeft:"-15px"}}>
+            />
+          </div>
+          <div className="col-11">
+            <span style={{ marginLeft: "-15px" }}>
               Bank Offer10% instant discount on PNB Credit Card, up to ₹1500, on
-            orders of ₹5,000
-          </span></div>
+              orders of ₹5,000
+            </span>
+          </div>
         </div>
-      
-       
-        
       </div>
     </div>
   );

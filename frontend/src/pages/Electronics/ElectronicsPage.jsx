@@ -4,7 +4,7 @@ import "../Mobile/MobilePage.css";
 import { useEffect } from "react";
 import { getProductData } from "../../Redux/ProductReducer/action";
 
-import MobileCard from "./MobileCard";
+
 import UpperBar from "../../components/UpperBar";
 import { useLocation, useSearchParams } from "react-router-dom";
 import ElectronicsCard from "./ElectronicsCard";

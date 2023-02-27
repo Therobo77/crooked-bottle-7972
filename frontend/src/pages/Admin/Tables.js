@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   deleteProductData,
   getProductData,
-} from "./Redux/ProductReducer/action";
+} from "../../Redux/AdminProductReducer/action";
 function Tables() {
   const data = useSelector((store) => {
-    return store?.productReducer?.products;
+    return store?.adminProductReducer?.products;
   });
 
   const dispatch = useDispatch();
@@ -391,9 +391,9 @@ function Tables() {
                           <img
                             src={item.thumbnail}
                             alt={item.title}
-                            height="50px"
-                            width="70px"
-                          ></img>{" "}
+                            height={"50px"}
+                            width={"70px"}
+                          ></img>
                         </td>
                         <td>
                           <p className="small">{item.brand}</p>

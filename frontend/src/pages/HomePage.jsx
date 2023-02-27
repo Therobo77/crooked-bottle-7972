@@ -1,4 +1,3 @@
-
 import { Box } from "@mui/system";
 import React from "react";
 import Banner from "../components/LandingPage/Banner";
@@ -11,8 +10,6 @@ import {
   electronics,
   Healthcare,
   BestSeller,
-} from "../components/LandingPage/data";
-import {
   clothes,
   Fashion,
   Appliances,
@@ -24,8 +21,13 @@ const Component = styled(Box)`
   background: #f2f2f2;
 `;
 
+import { getProductData } from "../Redux/ProductReducer/action";
+import { useDispatch } from "react-redux";
+import axios from "axios";
 
 const HomePage = () => {
+  const dispatch = useDispatch();
+
   return (
     <div>
       <Navbar />
