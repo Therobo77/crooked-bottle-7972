@@ -14,9 +14,11 @@
     align-items: center;
 }
 
-.header_logo>img{
+.header_logo img{
     width: 150px;
     object-fit: contain;
+    cursor: pointer;
+
   }
   .header_search{
         background-color: white;
@@ -53,7 +55,7 @@
     border-radius: 3px;
 
   }
-  .header_admin,.header_more,.header_cart{
+  .header_admin p,.header_more,.header_cart{
     color:white;
     font-weight: 600;
     cursor: pointer;

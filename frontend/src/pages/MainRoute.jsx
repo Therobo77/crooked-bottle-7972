@@ -17,6 +17,8 @@ import AdminAddProduct from "./Admin/AdminAddProduct";
 
 import Reset from "./../login/Reset";
 import SingleFashion from "./Fashion/SingleFashion";
+import Profile from "../login/Profile";
+import { AuthorizeUser,ProtectRoute } from './../middleware/auth';
 
 import AppliancesPage from "./Appliances/AppliancesPage";
 import ElectronicsPage from "./Electronics/ElectronicsPage";
@@ -31,6 +33,7 @@ const MainRoute = () => {
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/mobile-page" element={<MobilePage />}></Route>
+        {/* <Route path="/mobile-page" element={<AuthorizeUser><MobilePage /></AuthorizeUser>}></Route> */}
         <Route path="/appliances-page" element={<AppliancesPage />}></Route>
         <Route path="/electronics-page" element={<ElectronicsPage />}></Route>
         <Route path="/Fashion-Page" element={<FashionPage />}></Route>
@@ -46,11 +49,22 @@ const MainRoute = () => {
 
         {/* Vikash Route */}
         <Route path="/user_name" element={<Username />}></Route>
-        <Route path="/password" element={<Password />}></Route>
+        
         <Route path="/register" element={<Register />}></Route>
         <Route path="/recovery" element={<Recovery />}></Route>
 
         <Route path="/reset" element={<Reset />}></Route>
+
+        {/* Private Route */}
+        {/* <Route path="/password" element={<Password />}></Route> */}
+        <Route path="/password" element={<ProtectRoute><Password /></ProtectRoute>}></Route>
+
+
+        {/* Protect Route */}
+        {/* <Route path="/profile" element={<Profile />}></Route> */}
+        <Route path="/profile" element={<AuthorizeUser><Profile /></AuthorizeUser>}></Route>
+
+        
         <Route path="/deliverypage" element={<DeliveryPage />}></Route>
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
