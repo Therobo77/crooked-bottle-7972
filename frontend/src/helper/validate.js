@@ -1,27 +1,21 @@
-import { toast } from "react-hot-toast"
+import toast from 'react-hot-toast'
+import { authenticate } from './helper'
 
-// ===================== Validate UserName =========================
-/**Validate Login Page userName */
-
+/** validate login page username */
 export async function usernameValidate(values){
-    const errors = usernameVerify({},values);
+    const errors = usernameVerify({}, values);
+
+    if(values.username){
+        // check user exist or not
+        const { status } = await authenticate(values.username);
+        
+        if(status !== 200){
+            errors.exist = toast.error('User does not exist...!')
+        }
+    }
+
     return errors;
 }
-
-/** validate userName */
-const usernameVerify = (error={},values)=>{
-    if(!values.Username){
-        error.Username = toast.error('UserName is Required')
-    }
-    else if(values.Username.includes(" ")){
-        error.Username = toast.error("Invalid userName")
-    }
-    return error;
-}
-
-
-// ===================== Validate Password =========================
-
 
 /** validate password */
 export async function passwordValidate(values){
@@ -29,6 +23,35 @@ export async function passwordValidate(values){
 
     return errors;
 }
+
+/** validate reset password */
+export async function resetPasswordValidation(values){
+    const errors = passwordVerify({}, values);
+
+    if(values.password !== values.confirm_pwd){
+        errors.exist = toast.error("Password not match...!");
+    }
+
+    return errors;
+}
+
+/** validate register form */
+export async function registerValidation(values){
+    const errors = usernameVerify({}, values);
+    passwordVerify(errors, values);
+    emailVerify(errors, values);
+
+    return errors;
+}
+
+/** validate profile page */
+export async function profileValidation(values){
+    const errors = emailVerify({}, values);
+    return errors;
+}
+
+
+/** ************************************************* */
 
 /** validate password */
 function passwordVerify(errors = {}, values){
@@ -48,29 +71,17 @@ function passwordVerify(errors = {}, values){
     return errors;
 }
 
-// ==================================================
 
-/** validate reset password */
-export async function resetPasswordValidation(values){
-    const errors = passwordVerify({}, values);
-
-    if(values.password !== values.confirm_pwd){
-        errors.exist = toast.error("Password not match...!");
+/** validate username */
+function usernameVerify(error = {}, values){
+    if(!values.username){
+        error.username = toast.error('Username Required...!');
+    }else if(values.username.includes(" ")){
+        error.username = toast.error('Invalid Username...!')
     }
 
-    return errors;
+    return error;
 }
-
-/** validate register form */
-
-export async function registerValidation(values){
-    const errors = usernameVerify({}, values);
-    passwordVerify(errors, values);
-    emailVerify(errors, values);
-
-    return errors;
-}
-
 
 /** validate email */
 function emailVerify(error ={}, values){
@@ -84,13 +95,3 @@ function emailVerify(error ={}, values){
 
     return error;
 }
-
-
-/** validate profile page */
-// export async function profileValidation(values){
-//     const errors = emailVerify({}, values);
-//     return errors;
-// }
-
-
-/** ************************************************* */
