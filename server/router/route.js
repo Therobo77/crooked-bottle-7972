@@ -8,6 +8,8 @@ import Auth, { localVariables } from '../middleware/auth.js';
 
 
 
+
+
 /** POST Methods */
 router.route('/register').post(controller.register); // register user
 router.route('/registerMail').post(registerMail); // send the email
