@@ -42,7 +42,7 @@
 ## 🤝 *_Collaborators_*
 # 👨🏻 *Vikash Lal* `Team Leader`
 # 🧑🏻‍ *Rohit Kumar yadav*
-# 👱🏻‍♂️ *Sonia Diwedi*
+# 🧒🏻 *Sonia Diwedi*
 # 🧑🏻 *Nitin Gautam*
 # 🧒🏻 *Subhendu Das*
 
