@@ -391,9 +391,9 @@ function Tables() {
                           <img
                             src={item.thumbnail}
                             alt={item.title}
-                            height="50px"
-                            width="70px"
-                          ></img>{" "}
+                            height={"50px"}
+                            width={"70px"}
+                          ></img>
                         </td>
                         <td>
                           <p className="small">{item.brand}</p>
