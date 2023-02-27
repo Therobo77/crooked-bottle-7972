@@ -20,7 +20,7 @@ export const cartFailure = () => {
 export const getAllCart = () => (dispatch) => {
   dispatch(cartRequest());
   axios
-    .get("https://diva-mock-server.onrender.com/all_products")
+    .get("https://light-ant-sock.cyclic.app/products")
     .then((res) => {
       dispatch(getCartSuccess(res.data));
     })
@@ -31,7 +31,7 @@ export const getAllCart = () => (dispatch) => {
 export const removeItemCart = (id) => (dispatch) => {
   dispatch(cartRequest());
   axios
-    .delete(`http://localhost:8080/carts/${id}`)
+    .delete(`https://light-ant-sock.cyclic.app/products/${id}`)
     .then((res) => {
       console.log(res);
     })

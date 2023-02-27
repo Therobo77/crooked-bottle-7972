@@ -19,7 +19,7 @@ const Cart = () => {
 
   let totalPrice = Number(0);
   for (let i = 0; i < allCart.length; i++) {
-    totalPrice += allCart[i].price;
+    totalPrice += Number(allCart[i].price);
   }
 
   let subtotal = Number(totalPrice) + Number(delivery);
@@ -40,21 +40,21 @@ const Cart = () => {
   };
   const buyNow = async () => {
     console.log("payment");
+    navigate("/payment");
+    // const paymentData = {
+    //   purpose: "Test payment",
+    //   amount: 10,
+    // };
 
-    const paymentData = {
-      purpose: "Test payment",
-      amount: 10,
-    };
-
-    axios
-      .post("https://instamojo-test-1s1j.vercel.app/pay", paymentData)
-      .then((res) => {
-        console.log("res", res.data);
-        // window.location.href = res.data;
-      })
-      .catch((err) => {
-        console.log("payment error", err);
-      });
+    // axios
+    //   .post("https://instamojo-test-1s1j.vercel.app/pay", paymentData)
+    //   .then((res) => {
+    //     console.log("res", res.data);
+    //     // window.location.href = res.data;
+    //   })
+    //   .catch((err) => {
+    //     console.log("payment error", err);
+    //   });
   };
 
   return (
