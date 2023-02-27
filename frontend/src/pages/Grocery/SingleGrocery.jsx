@@ -4,12 +4,12 @@ import axios from "axios";
 import { shallowEqual, useSelector } from "react-redux";
 import { Box, Text } from "@chakra-ui/react";
 import SingleMobileCard from "./SingleGroceryCard";
-import {styled} from "@mui/material"
+import { styled } from "@mui/material";
 import SingleGroceryCard from "./SingleGroceryCard";
 
-const Component=styled(Box)`
-  background:#f2f2f2
-`
+const Component = styled(Box)`
+  background: #f2f2f2;
+`;
 export default function SingleGrocery() {
   const [data, setdata] = useState([]);
   const { isloading, product } = useSelector((store) => {
@@ -34,15 +34,14 @@ export default function SingleGrocery() {
   useEffect(() => {
     getsingledata(params.id);
   }, [params.id]);
- 
+
   return (
-    <Box >
+    <Box>
       {
-        <div style={{background:"f2f2f2",marginTop:"55px"}}> 
-          <div >
+        <div style={{ background: "f2f2f2" }}>
+          <div>
             <SingleGroceryCard {...data} />
           </div>
-         
         </div>
       }
     </Box>
