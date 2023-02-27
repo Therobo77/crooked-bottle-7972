@@ -47,9 +47,21 @@
 # 🧒🏻 *Subhendu Das*
 
 
+Installation and Setup
+Clone the repository to your local machine using git clone [https://github.com/crooked-bottle-7972.git](https://github.com/Therobo77/crooked-bottle-7972)
+Navigate to the project directory using cd crooked-bottle-7972
+Install the dependencies using npm install
+Create a .env file in the root directory and add the required environment variables (such as database credentials and API keys)
+Start the development server using npm start
+Features
+User-friendly interface with a clean and modern layout
+Powerful search functionality using keywords, categories, and filters
+Personalized recommendations based on browsing and purchasing history
+User authentication and account creation
+Secure checkout with multiple payment options
+Detailed product descriptions and customer reviews
+High-quality images showing products from multiple angles
+Hassle-free return policy and free shipping on orders over a certain amount
+Contributing
+We welcome contributions from the community! If you find a bug or have a feature request, please submit an issue. If you would like to contribute code, please submit a pull request.
 
-### Google Meet Link
-[Google Meet Link](https://meet.google.com/wpm-bntz-iet)
-
-- morning Scrum time 
-    - 11.30 sharp EveryDay (mandatory for Everyone)
