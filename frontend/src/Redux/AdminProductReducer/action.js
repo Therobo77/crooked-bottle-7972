@@ -28,7 +28,7 @@ export const deleteProductSuccess = (payload) => {
 export const getProductData = (dispatch) => {
   dispatch(getRequestProduct());
   axios
-    .get(`http://localhost:8080/products`)
+    .get(`https://light-ant-sock.cyclic.app/products`)
     .then((res) => {
       console.log(res.data);
       dispatch(getSuccessProduct(res.data));
@@ -40,7 +40,7 @@ export const getProductData = (dispatch) => {
 export const addProduct = (payload) => (dispatch) => {
   dispatch(getRequestProduct());
   axios
-    .post("http://localhost:8080/products", payload)
+    .post("https://light-ant-sock.cyclic.app/products", payload)
     .then(() => {
       dispatch(postProductSuccess());
     })
@@ -51,7 +51,7 @@ export const addProduct = (payload) => (dispatch) => {
 export const deleteProductData = (id) => (dispatch) => {
   dispatch(getRequestProduct());
   axios
-    .delete(`http://localhost:8080/products/${id}`)
+    .delete(`https://light-ant-sock.cyclic.app/products/${id}`)
     .then((res) => {
       console.log(res.data);
     })
