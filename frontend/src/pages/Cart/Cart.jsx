@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getAllCart, removeItemCart } from "../../Redux/CartReducer/cartAction";
+import Header from "../../components/LandingPage/Header/Header";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -59,6 +62,8 @@ const Cart = () => {
 
   return (
     <>
+      <Header />
+      <Navbar />
       {allCart.length === 0 ? (
         <div className="mx-auto col-8">
           <div className="card mt-5 mb-5">
@@ -187,6 +192,7 @@ const Cart = () => {
           </div>
         </div>
       )}
+      <Footer />
     </>
   );
 };

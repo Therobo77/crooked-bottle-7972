@@ -4,12 +4,15 @@ import axios from "axios";
 import { shallowEqual, useSelector } from "react-redux";
 import { Box, Text } from "@chakra-ui/react";
 import SingleMobileCard from "./SingleMobileCard";
-import {styled} from "@mui/material"
+import { styled } from "@mui/material";
 import SingleElectronicsCard from "./SingleMobileCard";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import Header from "../../components/LandingPage/Header/Header";
 
-const Component=styled(Box)`
-  background:#f2f2f2
-`
+const Component = styled(Box)`
+  background: #f2f2f2;
+`;
 export default function ElectronicsMobile() {
   const [data, setdata] = useState([]);
   const { isloading, product } = useSelector((store) => {
@@ -34,17 +37,18 @@ export default function ElectronicsMobile() {
   useEffect(() => {
     getsingledata(params.id);
   }, [params.id]);
- 
+
   return (
-    <Box >
-      {
-        <div style={{background:"f2f2f2",marginTop:"55px"}}> 
-          <div >
-            <SingleElectronicsCard {...data} />
+    <>
+      <Box>
+        {
+          <div style={{ background: "f2f2f2" }}>
+            <div>
+              <SingleElectronicsCard {...data} />
+            </div>
           </div>
-         
-        </div>
-      }
-    </Box>
+        }
+      </Box>
+    </>
   );
 }
