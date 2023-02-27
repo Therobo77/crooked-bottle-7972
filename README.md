@@ -3,17 +3,12 @@
 
 
 
-# _ASOS_ (Clone)
+# _YouKart.com_
 
-**ASOS is an online fashion retailer which sells clothes online, from its own home lines and from a variety of different brands. In this article we will conduct a brief website analysis of the ASOS website.**
+**YouKart.com is a user-friendly ecommerce site offering a wide range of products, personalized recommendations, secure checkout, and helpful customer support. With detailed product descriptions and high-quality images, customers can make informed purchasing decisions. The site also offers convenient services such as free shipping and a hassle-free return policy.**
 
 **User can `sign` in or `sign` up using `google sign in` or through `email verification`.**
 
-## Project look like this
-
-```javascript
-// here we have to put the ss of the project
-```
 
 ## Build with
 
@@ -44,46 +39,13 @@
 
 - ### **Integration**
 
-## 🤝 **_Collaborators_**
+## 🤝 *_Collaborators_*
+# 👨🏻 *Vikash Lal* `Team Leader`
+# 🧑🏻‍ *Rohit Kumar yadav*
+# 👱🏻‍♂️ *Sonia Diwedi*
+# 🧑🏻 *Nitin Gautam*
+# 🧒🏻 *Subhendu Das*
 
-# 🧔🏻 **Sanket Patil** `Project Manager`
-
-- Github:
-- Twitter:
-- Linkedin:
-- Email:
-
-# 👨🏻 **Mehfooz Khan** `Team Leader`
-
-- Github: [@mehfooz](https://github.com/mehfoozkhangithub)
-- Linkedin: [Mehfooz Khan](https://www.linkedin.com/in/mehfoozkhan51/)
-- Email: (mehfoozshaik51@gmail.com)
-
-# 🧑🏻‍🦰 **Mohammad Ali**
-
-- Github:[@md_ali](https://github.com/mdali-11)
-- Linkedin: [Mohammad Ali](https://www.linkedin.com/in/md-ali11/)
-- Email: (mdali91935@gmail.com)
-
-# 👱🏻‍♂️ **Rahul Singh**
-
-- Github:
-- Twitter:
-- Linkedin:
-- Email:
-
-# 🧑🏻 **Ashish Bajaj**
-
-- Github: [@ashish](https://github.com/abajaj655)
-- Linkedin: [Ashish Bajaj](https://www.linkedin.com/in/ashish-bajaj-7299a3235/)
-- Email: (abajaj655@gmail.com)
-
-# 🧒🏻 **Bhupendra Kumar chandrakar**
-
-- Github:
-- Twitter:
-- Linkedin:
-- Email:
 
 
 ### Google Meet Link
