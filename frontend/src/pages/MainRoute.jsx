@@ -16,6 +16,7 @@ import SingleMobile from "./Mobile/SingleMobile";
 import Reset from './../login/Reset';
 import SingleFashion from "./Fashion/SingleFashion";
 import Profile from "../login/Profile";
+import { AuthorizeUser,ProtectRoute } from './../middleware/auth';
 
 
 
@@ -26,18 +27,28 @@ const MainRoute = () => {
         <Route path="/" element={<HomePage />}></Route>
 
         <Route path="/mobile-page" element={<MobilePage />}></Route>
+        {/* <Route path="/mobile-page" element={<AuthorizeUser><MobilePage /></AuthorizeUser>}></Route> */}
+
         <Route path="/single/:id" element={<SingleMobile />} />
       
         <Route path="/cart" element={<Cart />}></Route>
         
         {/* Vikash Route */}
         <Route path="/user_name" element={<Username />}></Route>
-        <Route path="/password" element={<Password />}></Route>
+        
         <Route path="/register" element={<Register />}></Route>
         <Route path="/recovery" element={<Recovery />}></Route>
 
         <Route path="/reset" element={<Reset />}></Route>
-        <Route path="/profile" element={<Profile />}></Route>
+
+        {/* Private Route */}
+        {/* <Route path="/password" element={<Password />}></Route> */}
+        <Route path="/profile" element={<ProtectRoute><Password /></ProtectRoute>}></Route>
+
+
+        {/* Protect Route */}
+        {/* <Route path="/profile" element={<Profile />}></Route> */}
+        <Route path="/profile" element={<AuthorizeUser><Profile /></AuthorizeUser>}></Route>
 
         
         <Route path="/deliverypage" element={<DeliveryPage />}></Route>

@@ -4,8 +4,8 @@ import toast, { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
 import { profileValidation } from "../helper/validate";
 import convertToBase64 from "../helper/convert";
-// import useFetch from "../hooks/fetch.hook";
-// import { updateUser } from "../helper/helper";
+import useFetch from "../hooks/fetch.hook";
+import { updateUser } from "../helper/helper";
 import { useNavigate } from "react-router-dom";
 
 import styles from "../styles/Username.module.css";
@@ -13,17 +13,16 @@ import extend from "../styles/Profile.module.css";
 
 export default function Profile() {
   const [file, setFile] = useState();
-  // const [{ isLoading, apiData, serverError }] = useFetch();
+  const [{ isLoading, apiData, serverError }] = useFetch();
   const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: {
-      // firstName: apiData?.firstName || "",
-      // lastName: apiData?.lastName || "",
-      // email: apiData?.email || "",
-      // mobile: apiData?.mobile || "",
-      // address: apiData?.address || "",
-
+      firstName: apiData?.firstName || "",
+      lastName: apiData?.lastName || "",
+      email: apiData?.email || "",
+      mobile: apiData?.mobile || "",
+      address: apiData?.address || "",
     },
     enableReinitialize: true,
     validate: profileValidation,
@@ -31,15 +30,15 @@ export default function Profile() {
     validateOnChange: false,
     onSubmit: async (values) => {
       values = await Object.assign(values, {
-        // profile: file || apiData?.profile || "",
+        profile: file || apiData?.profile || "",
       });
-      // let updatePromise = updateUser(values);
+      let updatePromise = updateUser(values);
 
-      // toast.promise(updatePromise, {
-      //   loading: "Updating...",
-      //   success: <b>Update Successfully...!</b>,
-      //   error: <b>Could not Update!</b>,
-      // });
+      toast.promise(updatePromise, {
+        loading: "Updating...",
+        success: <b>Update Successfully...!</b>,
+        error: <b>Could not Update!</b>,
+      });
     },
   });
 
@@ -55,9 +54,9 @@ export default function Profile() {
     navigate("/");
   }
 
-  // if (isLoading) return <h1 className="text-2xl font-bold">isLoading</h1>;
-  // if (serverError)
-  //   return <h1 className="text-xl text-red-500">{serverError.message}</h1>;
+  if (isLoading) return <h1 className="text-2xl font-bold">isLoading</h1>;
+  if (serverError)
+    return <h1 className="text-xl text-red-500">{serverError.message}</h1>;
 
   return (
     <div className="container mx-auto">
@@ -79,8 +78,7 @@ export default function Profile() {
             <div className="profile flex justify-center py-4">
               <label htmlFor="profile">
                 <img
-                  // src={apiData?.profile || file || avatar}
-                  src={ file || avatar}
+                  src={apiData?.profile || file || avatar}
                   className={`${styles.profile_img} ${extend.profile_img}`}
                   alt="avatar"
                 />
