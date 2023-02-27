@@ -21,11 +21,11 @@ import {
 const Header = () => {
   return (
     <div className="header">
-      <Link to="/">
-        <div className="header_logo">
-          <img src={logo} alt="logo"></img>
-        </div>
-      </Link>
+ fp05_295_day_dummy
+      <div className="header_logo">
+      <Link to="/"><img src={logo} alt="logo"></img></Link>
+        
+      </div>
 
       <div className="header_search">
         <input type="text" placeholder="Search for products, brands and more" />
@@ -48,7 +48,7 @@ const Header = () => {
       </div>
       <div className="header_admin">
         <Link to="/admin">
-          <p>Become A Seller</p>
+          <p>Admin</p>
         </Link>
       </div>
       <div className="header_more">
