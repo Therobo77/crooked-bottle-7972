@@ -88,7 +88,7 @@ const Navbar = () => {
       <NavbarContainer>
         {navData.map((temp, i) => (
           <NavbarItem key={i}>
-            <img src={temp.url} style={{ width: 64 }} alt={temp.text} />
+            <img  src={temp.url} style={{ width: 64 }} alt={temp.text} />
             <p>{temp.text}</p>
           </NavbarItem>
         ))}
