@@ -7,7 +7,6 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 import { Link } from "react-router-dom";
 
-
 import {
   Menu,
   MenuButton,
@@ -18,14 +17,16 @@ import {
   MenuOptionGroup,
   MenuDivider,
   Button,
-  
-} from '@chakra-ui/react' 
+} from "@chakra-ui/react";
 const Header = () => {
   return (
     <div className="header">
-      <div className="header_logo">
-        <img src={logo} alt="logo"></img>
-      </div>
+      <Link to="/">
+        <div className="header_logo">
+          <img src={logo} alt="logo"></img>
+        </div>
+      </Link>
+
       <div className="header_search">
         <input type="text" placeholder="Search for products, brands and more" />
         <SearchIcon />
@@ -33,9 +34,7 @@ const Header = () => {
 
       <div className="header_login">
         <Menu>
-          <MenuButton _hover={"curser:pointer "} >
-            Log in
-          </MenuButton>
+          <MenuButton _hover={"curser:pointer "}>Log in</MenuButton>
           <MenuList color={"black"} fontSize={"small"}>
             <MenuItem>My Profile</MenuItem>
             <MenuItem>YouKart Plus Zone</MenuItem>
@@ -48,22 +47,18 @@ const Header = () => {
         {/* <button>Log in</button> */}
       </div>
       <div className="header_admin">
-
         <Link to="/admin">
           <p>Become A Seller</p>
         </Link>
       </div>
-           <div className="header_more">
-      <Menu>
-          <MenuButton _hover={"curser:pointer "} >
-            More
-          </MenuButton>
+      <div className="header_more">
+        <Menu>
+          <MenuButton _hover={"curser:pointer "}>More</MenuButton>
           <MenuList color={"black"} fontSize={"small"}>
             <MenuItem>Notification Prefrences</MenuItem>
             <MenuItem>24x7 Customer Care</MenuItem>
             <MenuItem>Advertise</MenuItem>
             <MenuItem>Download</MenuItem>
-
           </MenuList>
         </Menu>
         <ExpandMoreIcon />
@@ -73,13 +68,7 @@ const Header = () => {
           <ShoppingCartIcon />
           <p>cart</p>
         </Link>
-
-
-        <p>Admin</p>
-
       </div>
-
-  
     </div>
   );
 };
