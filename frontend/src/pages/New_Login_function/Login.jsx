@@ -125,7 +125,7 @@ export default function Login() {
         </Box>
       </Stack>
     </Flex>
-      <Footer/>
+     
     </>
   );
   
