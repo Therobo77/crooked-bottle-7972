@@ -45,6 +45,11 @@ SigIn Page
 Login Page
 ![image](https://user-images.githubusercontent.com/112754761/231130865-a37a6494-49e1-411f-9f2d-f04da1dfd658.png)
 
+
+Admin Page
+![image](https://user-images.githubusercontent.com/112754761/231153649-24ed0d9f-9f91-44c1-ad94-e0613074dd23.png)
+
+
 ## Tool Used
 
 - ### **Frontend**
@@ -54,8 +59,8 @@ Login Page
 
 ## 🤝 *_Collaborators_*
 # 👨🏻 *Vikash Lal* `Team Leader`
-# 🧑🏻‍ *Rohit Kumar yadav*
 # 🧒🏻 *Sonia Diwedi*
+# 🧑🏻‍ *Rohit Kumar yadav*
 # 🧑🏻 *Nitin Gautam*
 # 🧒🏻 *Subhendu Das*
 We welcome contributions from the community! If you find a bug or have a feature request, please submit an issue. If you would like to contribute code, please submit a pull request.
