@@ -45,16 +45,10 @@ const MainRoute = () => {
     <div>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        {/* <Route path="/mobile-page" element={<MobilePage />}></Route> */}
-        {/* <Route path="/appliances-page" element={ <AppliancesPage /> }></Route> */}
-        {/* <Route path="/electronics-page" element={ <ElectronicsPage /> }></Route>
-        <Route path="/Fashion-Page" element={ <FashionPage /> }></Route>
-        <Route path="/Grocery-page" element={ <GroceryPage/> }></Route>
-        <Route path="/Furniture-Page" element={ <FurniturePage /> }></Route>
-         */}
+       
         <Route path="/product/single/:id" element={<SingleAppliances />} />
         <Route path="/mobile-page" element={<MobilePage />}></Route>
-        {/* <Route path="/mobile-page" element={<AuthorizeUser><MobilePage /></AuthorizeUser>}></Route> */}
+     
         <Route path="/appliances-page" element={<AppliancesPage />}></Route>
         <Route path="/electronics-page" element={<ElectronicsPage />}></Route>
         <Route path="/Fashion-Page" element={<FashionPage />}></Route>

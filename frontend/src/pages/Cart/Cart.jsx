@@ -80,13 +80,13 @@ console.log(price,total);
                           <div key={el.id} className="card p-3 mt-2">
                             <div className="row">
                               <div className="col-2">
-                                <img src={el.thumbnail} alt={el.title} />
+                                <img src={el.image} alt={el.title} />
                               </div>
                               <div className="col-10">
-                                <h5>{el.productName}</h5>
-                                <h5>{el.description}</h5>
+                                <h5>{el.title}</h5>
+                                <h5>{el.category}</h5>
                                 <p>
-                                  Price: <del>{el.reviews}</del>{" "}
+                                  Price: <del>1000</del>{" "}
                                   <b>{el.price}</b>
                                 </p>
                               </div>

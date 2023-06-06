@@ -10,6 +10,7 @@ import FurnitureCard from "./FurnitureCard";
 import Header from "../../components/LandingPage/Header/Header";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import MobileCard from "../Mobile/MobileCard";
 
 export default function FurniturePage() {
   const data = useSelector((store) => store.productReducer.products);
@@ -49,7 +50,7 @@ export default function FurniturePage() {
                   .map((el) => {
                     return (
                       <div key={el.id} className="col-md-3 col-12">
-                        <FurnitureCard {...el} />
+                        <MobileCard {...el} />
                       </div>
                     );
                   })}

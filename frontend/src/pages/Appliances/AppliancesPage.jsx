@@ -12,6 +12,7 @@ import AppliancesCard from "./AppliancesCard";
 import Header from "../../components/LandingPage/Header/Header";
 import Navbar from "../../components/Navbar";
 import "../search/Search.css"
+import MobileCard from "../Mobile/MobileCard";
 
 export default function AppliancesPage() {
   const data=useSelector((store)=>store.productReducer.products)
@@ -69,7 +70,7 @@ if(search.isError){
                   .map((el) => {
                     return (
                       <div key={el.id} className="col-md-3 col-12">
-                        <AppliancesCard {...el} />
+                        <MobileCard {...el} />
                       </div>
                     );
                   })}

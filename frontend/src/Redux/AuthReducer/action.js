@@ -16,12 +16,12 @@ export const loginSuccess=(payload)=>{
 
 
 export const login =(user)=> (dispatch) => {
-  console.log("user",user);
+  
   dispatch(loginRequest)
   return axios.post(`https://crooked-bottle.onrender.com/user/login/`,user).then((res)=>{
     
     dispatch(loginSuccess(res.data.token))
-
+   
 
   }).catch((e)=>{
     dispatch(loginFailure())

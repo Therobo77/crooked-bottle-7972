@@ -19,14 +19,14 @@ import "../Mobile/MobilePage.css";
 import { useSelector } from "react-redux";
 import "../search/Search.css"
 export default function ElectronicsCard({
-  id,
+  item_id,
   title,
   description,
-  price,
+  new_price,
   rating,
   brand,
   category,
-  thumbnail,
+  image,
 }) {
 
   const search = useSelector(store=>store.productReducer);
@@ -44,23 +44,23 @@ export default function ElectronicsCard({
 
   return (
     <>
-      <div key={id + 1} className="mt-3">
+      <div key={item_id + 1} className="mt-3">
         <Card maxW="sm" boxShadow="2xl" rounded="lg">
-          <NavLink to={`/single/${id}`}>
+          <NavLink to={`/single/${item_id}`}>
             <CardBody>
               <Center>
                 <Image
                   boxSize="200px"
-                  src={thumbnail}
-                  alt={thumbnail}
+                  src={image}
+                  alt={image}
                   borderRadius="lg"
                 />
               </Center>
               <Stack mt="0.5rem" spacing="3">
                 <Heading size="md">{title}</Heading>
-                <Text>{description.split("").splice(0, 25)}</Text>
+                <Text>{description}</Text>
                 <Text color="blue.600" fontSize="2xl">
-                  ₹{price}
+                  ₹{new_price}
                 </Text>
                 <span>Free delivery</span>
               </Stack>

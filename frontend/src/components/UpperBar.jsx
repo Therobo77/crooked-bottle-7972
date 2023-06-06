@@ -11,7 +11,7 @@ const[searchParams,setSearchParams]=useSearchParams()
 
 const init=searchParams.get("order")
 const [order,setorder]=useState(init||"")
-  console.log("category",props);
+  
 useEffect(()=>{
   if(order=='asc'){
 
@@ -34,27 +34,48 @@ useEffect(()=>{
   }
 
   console.log("order",order);
-  return (
-    <div className="col-md-12 col-3 mt-5" >
-      <Heading as="h1" size="md">
-       {props.category}
-      </Heading>
+  return <div className="col-md-12 col-3 mt-5">
+  <Heading as="h1" size="md">
+    {props.category_name}
+  </Heading>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          width: "50%",
-        }}
-      >
-        <Heading size="sm">Sort By Price</Heading>
-        <label>asc</label>
-        <input type="radio" name="order" value={'asc'} onChange={(e)=>handleSort(e)}/>
-        <label >desc</label>
-        <input type="radio" name="order" value={'desc'} onChange={(e)=>handleSort(e)}  />
-        {/* <button>Price--Low to High</button>
-        <button>Price--High to Low</button> */}
-      </div>
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "space-evenly",
+      width: "50%",
+      marginTop: "1rem",
+    }}
+  >
+    <Heading size="sm" marginRight="1rem">
+      Sort By Price:
+    </Heading>
+    <div style={{ display: "flex", alignItems: "center" }}>
+      <label htmlFor="asc" style={{ marginRight: "0.5rem" }}>
+        Ascending
+      </label>
+      <input
+        type="radio"
+        id="asc"
+        name="order"
+        value="asc"
+        onChange={(e) => handleSort(e)}
+      />
     </div>
-  );
+    <div style={{ display: "flex", alignItems: "center" }}>
+      <label htmlFor="desc" style={{ marginRight: "0.5rem" }}>
+        Descending
+      </label>
+      <input
+        type="radio"
+        id="desc"
+        name="order"
+        value="desc"
+        onChange={(e) => handleSort(e)}
+      />
+    </div>
+  </div>
+</div>
+
+    
 }

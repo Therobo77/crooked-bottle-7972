@@ -11,6 +11,7 @@ import Header from "../../components/LandingPage/Header/Header";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import "../search/Search.css"
+import MobileCard from "../Mobile/MobileCard";
 export default function GroceryPage() {
   const search = useSelector(store=>store.productReducer);
   const data = useSelector((store) => store.productReducer.products);
@@ -60,7 +61,7 @@ if(search.isError){
                   .map((el) => {
                     return (
                       <div key={el.id} className="col-md-3 col-12">
-                        <GroceryCard {...el} />
+                        <MobileCard {...el} />
                       </div>
                     );
                   })}

@@ -71,7 +71,7 @@ export default function SingleFashionCard(data) {
           </Button>
           <Button
          
-            style={{
+              style={{
               background: "#fb641b",
               color: "white",
               marginLeft: "8%",

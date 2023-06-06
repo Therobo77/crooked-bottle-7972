@@ -22,9 +22,9 @@ const Component = styled(Box)`
   const getsingledata = (id) => {
   
     axios
-      .get(`https://light-ant-sock.cyclic.app/products/${id}`)
+      .get(`https://json-server-xyof.onrender.com/products/${id}`)
       .then((res) => {
-        console.log(res);
+        
         setdata(res.data);
       })
       .catch((err) => {

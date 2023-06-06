@@ -10,8 +10,9 @@ import {
   Heading,
   Text,
   useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { useState } from "react";
@@ -27,6 +28,7 @@ export default function Login() {
     password: "",
   });
   const [msg, setMsg] = useState("");
+  const isAuth=useSelector((store)=> store.authreducer.isAuth)
   const onChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
@@ -34,39 +36,23 @@ export default function Login() {
   const dispatch=useDispatch()
   const navigate=useNavigate()
   const location =useLocation()
-  
-  
-  // const postData = (e) => {
-  //   e.preventDefault();
-  //   fetch("http://localhost:3300/user/login", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(data),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       if (res.token) {
-  //         setMsg(res.token);
-  //         localStorage.setItem("token", res.token);
-  //         console.log("token",res.token);
-  //       } else {
-  //         setMsg(res.msg);
-  //       }
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     })
-      
-  // };
+  const toast = useToast();
 
   const handleLogin=()=>{
     console.log("navigate");
-    dispatch(login(data)).then(()=>{
+    dispatch(login(data))
       navigate(location.state)
-    })
+      if(isAuth ){
+        toast({
+          title: "login successful",
+          status: "success",
+          duration: 2000,
+          isClosable: true,
+        });
+      }
+      
   }
+
   
   return (
     <>

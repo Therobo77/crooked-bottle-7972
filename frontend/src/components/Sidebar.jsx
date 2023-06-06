@@ -21,7 +21,11 @@ export default function Sidebar() {
   }, [data]);
 
   const mapCategory = (data) => {
-    let ct = data.map((el) => el.category);
+    let ct;
+    
+
+      ct = data.map((el) => el.category);
+    
     const catSet = new Set(ct);
     SetLocalCate([...catSet]);
   };
@@ -41,26 +45,52 @@ export default function Sidebar() {
    
 
     return(
-        <div className="sidebar-App">
-                <Box className="left-mobile">
-                    <Heading as='h2' size='l' marginBottom={"10px"}>Filter By CATEGORIES</Heading>
-                    {/* <Text>CATEGORIES</Text> */}
-                    {
-                        localCate?.map((el,id)=>{
-                            return(
-                                <div key={id}>
-                                    <input type="checkbox" className="form-check-input me-3"
-                                    value={el}
-                                    checked={category.includes(el)}
-                                    onChange={handlechange} />
-                                    <label >{el}</label>
-                                </div>
-                            )
-                        })
-                    }
-                </Box>
-                
-            
+      <div className="sidebar-App">
+  <Box className="left-mobile">
+    <Heading as="h2" size="l" marginBottom="10px" color="gray.800">
+      Filter By Categories
+    </Heading>
+    {localCate?.map((el, id) => {
+      return (
+        <div
+          key={id}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginBottom: "0.5rem",
+          }}
+        >
+          <input
+            type="checkbox"
+            className="form-check-input me-3"
+            value={el}
+            checked={category.includes(el)}
+            onChange={handlechange}
+            style={{
+              appearance: "none",
+              width: "1rem",
+              height: "1rem",
+              borderRadius: "50%",
+              marginRight: "0.5rem",
+              border: "2px solid #3182ce",
+              backgroundColor: category.includes(el) ? "#3182ce" : "transparent",
+            }}
+          />
+          <label
+            style={{
+              color: "#4a5568",
+              fontWeight: "500",
+              cursor: "pointer",
+            }}
+          >
+            {el}
+          </label>
         </div>
+      );
+    })}
+  </Box>
+</div>
+
+    
     )
 };

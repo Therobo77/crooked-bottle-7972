@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Image, Text, Icon } from "@chakra-ui/react";
+import { Box, Button, Heading, Image, Text, Icon, Flex } from "@chakra-ui/react";
 import { styled } from "@mui/material";
 import { FaCartPlus, FaRupeeSign } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
@@ -37,7 +37,7 @@ export default function SingleMobileCard(data) {
     width: "100%",
   });
   const moveToCart = (data) => {
-    // console.log("car",data);
+    
    dispatch( addTocart(data));
      navigate("/cart");
   };
@@ -57,18 +57,20 @@ export default function SingleMobileCard(data) {
         }}
       >
         <div>
-          <Image src={data.thumbnail} />
+          <Image src={data.image} />
+          <Flex>
+
           <Button
             leftIcon={<FaCartPlus />}
             style={{
               background: " #ff9f00",
               color: "white",
               marginLeft: "8%",
-              width: "30%",
+              
               marginTop: "5%",
             }}
             onClick={() => moveToCart(data)}
-          >
+            >
             Add to Cart
           </Button>
           <Button
@@ -77,11 +79,14 @@ export default function SingleMobileCard(data) {
               color: "white",
               marginLeft: "8%",
               marginTop: "5%",
-              width: "30%",
+              width: "40%",
+              
             }}
-          >
+            onClick={() => moveToCart(data)}
+            >
             Buy Now
           </Button>
+            </Flex>
         </div>
 
         <div style={{ marginLeft: "10%" }}>

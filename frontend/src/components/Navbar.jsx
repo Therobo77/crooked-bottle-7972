@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -87,10 +88,11 @@ const Navbar = () => {
     <>
       <NavbarContainer>
         {navData.map((temp, i) => (
-          <NavbarItem key={i}>
+         <Link to={"/mobile-page"}> <NavbarItem key={i}>
             <img  src={temp.url} style={{ width: 64 }} alt={temp.text} />
             <p>{temp.text}</p>
           </NavbarItem>
+          </Link>
         ))}
       </NavbarContainer>
     </>

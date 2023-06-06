@@ -12,22 +12,20 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
-  Button,
 } from "@chakra-ui/react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { searchData } from "../../../Redux/ProductReducer/action";
 const Header = () => {
   const [search,setsearch]=useState("");
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
+  const isAuth=useSelector((store)=> store.authreducer.isAuth)
+
   const handleSearch = () => {
     dispatch(searchData(search));
     navigate("/search");
   }
+
   return (
     <div className="header">
  
@@ -43,9 +41,10 @@ const Header = () => {
 
       <div className="header_login">
        
-       <Link to="/login">
-       <button>Log in</button>
-       </Link> 
+       
+        {isAuth? <button>Log Out</button>:<Link to="/login"><button>Log in</button> </Link> }
+       
+      
       </div>
       <div className="header_admin">
         <Link to="/admin">

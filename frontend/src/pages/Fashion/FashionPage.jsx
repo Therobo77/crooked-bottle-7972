@@ -10,6 +10,9 @@ import Footer from "../../components/Footer";
 import UpperBar from "../../components/UpperBar";
 import { useLocation, useSearchParams } from "react-router-dom";
 import FashionCard from "./FashionCard";
+import MobileCard from "../Mobile/MobileCard";
+
+
 export default function FashionPage() {
   const data = useSelector((store) => store.productReducer.products);
   console.log(data);
@@ -48,23 +51,12 @@ export default function FashionPage() {
                   .map((el) => {
                     return (
                       <div key={el.id} className="col-md-3 col-12">
-                        <FashionCard {...el} />
+                        <MobileCard {...el} />
                       </div>
                     );
                   })}
 
-              {/* {data.length > 0 &&
-              data?.map((el, i) => {
-                if (i < 15) {
-                  return (
-                    <div key={el.id} className="col-md-3 col-12">
-                      <MobileCard {...el} />
-                    </div>
-                  );
-                } else {
-                  return false;
-                }
-              })} */}
+             
             </div>
           </div>
         </div>
